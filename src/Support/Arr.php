@@ -24,4 +24,15 @@ class Arr
 
         return $array;
     }
+
+    public static function without(array $array, string $value)
+    {
+        $key = array_search($value, $array);
+
+        if ($key !== false) {
+            unset($array[$key]);
+        }
+
+        return $array;
+    }
 }
