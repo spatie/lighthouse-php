@@ -2,8 +2,8 @@
 
 namespace Spatie\Lighthouse\Exceptions;
 
-use Exception;
 use BackedEnum;
+use Exception;
 
 class InvalidEnumValue extends Exception
 {

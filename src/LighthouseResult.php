@@ -24,7 +24,7 @@ class LighthouseResult
 
     public function cpuThrottlingWasEnabled(): bool
     {
-        return ! $this->configSettings('disableNetworkThrottling');
+        return ! $this->configSettings('disableCpuThrottling');
     }
 
     public function formFactor(): FormFactor
