@@ -92,7 +92,7 @@ class Lighthouse
         return $this;
     }
 
-    public function getResult(): LighthouseResult
+    public function run(): LighthouseResult
     {
         $arguments = $this->lighthouseScriptArguments();
 
