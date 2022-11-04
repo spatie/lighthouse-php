@@ -6,6 +6,7 @@ use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
 use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Exceptions\LighthouseReportedError;
+use Spatie\Lighthouse\Support\Arr;
 use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
 
@@ -130,12 +131,12 @@ class Lighthouse
         return new LighthouseResult($result);
     }
 
-    public function lighthouseScriptArguments(): array
+    public function lighthouseScriptArguments(string $key = null): array
     {
-        return [
+        return Arr::get([
             'url' => $this->url,
             'chromeOptions' => $this->chromeOptions,
             'lighthouseConfig' => $this->lighthouseConfig,
-        ];
+        ], $key);
     }
 }
