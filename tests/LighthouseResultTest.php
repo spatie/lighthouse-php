@@ -131,6 +131,6 @@ it('can get the cumulative layout shift', function () {
         ->formattedCumulativeLayoutShift()->toEqual(0);
 });
 
-it('can get the lighthouse version', function() {
-   expect($this->lighthouseResult->lighthouseVersion())->toEqual('9.6.8');
+it('can get the lighthouse version', function () {
+    expect($this->lighthouseResult->lighthouseVersion())->toEqual('9.6.8');
 });
