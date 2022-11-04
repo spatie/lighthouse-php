@@ -2,7 +2,6 @@
 
 namespace Spatie\Lighthouse\Exceptions;
 
-use Spatie\Lighthouse\Lighthouse;
 use Exception;
 
 class LighthouseReportedError extends Exception

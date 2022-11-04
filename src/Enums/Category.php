@@ -23,7 +23,7 @@ enum Category: string
     {
         $enum = self::tryFrom($value);
 
-        if (!$enum) {
+        if (! $enum) {
             throw InvalidCategory::make($value);
         }
 
