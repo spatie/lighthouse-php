@@ -79,13 +79,15 @@ class Lighthouse
         return $this;
     }
 
-    public function formFactor(string|FormFactor $formFactor)
+    public function formFactor(string|FormFactor $formFactor): self
     {
         if (is_string($formFactor)) {
             $formFactor = FormFactor::fromString($formFactor);
         }
 
         $this->lighthouseConfig['settings']['emulatedFormFactor'] = $formFactor->value;
+        
+        return $this;
     }
 
     public function withConfig(array $lighthouseConfig): self

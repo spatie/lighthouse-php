@@ -61,7 +61,7 @@ it('can get the configSettings', function () {
 });
 
 it('can get the emulated form factor', function () {
-    expect($this->lighthouseResult->emulatedFormFactor())->toEqual(FormFactor::Desktop);
+    expect($this->lighthouseResult->formFactor())->toEqual(FormFactor::Desktop);
 });
 
 it('can determine if network throttling was enabled', function () {

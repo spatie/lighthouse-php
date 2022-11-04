@@ -27,7 +27,7 @@ class LighthouseResult
         return ! $this->configSettings('disableNetworkThrottling');
     }
 
-    public function emulatedFormFactor(): FormFactor
+    public function formFactor(): FormFactor
     {
         return FormFactor::from($this->configSettings('emulatedFormFactor'));
     }
