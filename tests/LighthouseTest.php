@@ -97,3 +97,28 @@ it('can set a form factor', function () {
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.emulatedFormFactor'))
         ->toEqual(FormFactor::Mobile->value);
 });
+
+it('can throttle cpu', function () {
+    $this->lighthouse->throttleCpu();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableCpuThrottling'))->toBeFalse();
+});
+
+it('can disable throttling cpu', function () {
+    $this->lighthouse->doNotThrottleCpu();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableCpuThrottling'))->toBeTrue();
+});
+
+it('can throttle the network', function () {
+    $this->lighthouse->throttleNetwork();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableNetworkThrottling'))->toBeFalse();
+});
+
+it('can disable throttling the network', function () {
+    $this->lighthouse->doNotThrottleNetwork();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableNetworkThrottling'))->toBeTrue();
+});
+

@@ -74,7 +74,7 @@ class Lighthouse
             return $category->value;
         }, $categories);
 
-        $this->lighthouseConfig['settings']['onlyCategories'] = $categories;
+        Arr::set($this->lighthouseConfig, 'settings.onlyCategories', $categories);
 
         return $this;
     }
@@ -85,7 +85,35 @@ class Lighthouse
             $formFactor = FormFactor::fromString($formFactor);
         }
 
-        $this->lighthouseConfig['settings']['emulatedFormFactor'] = $formFactor->value;
+        Arr::set($this->lighthouseConfig, 'settings.emulatedFormFactor', $formFactor->value);
+
+        return $this;
+    }
+
+    public function throttleNetwork(): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.disableNetworkThrottling', false);
+
+        return $this;
+    }
+
+    public function doNotThrottleNetwork(): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.disableNetworkThrottling', true);
+
+        return $this;
+    }
+
+    public function throttleCpu(): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.disableCpuThrottling', false);
+
+        return $this;
+    }
+
+    public function doNotThrottleCpu(): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.disableCpuThrottling', true);
 
         return $this;
     }

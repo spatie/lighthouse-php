@@ -59,6 +59,8 @@ Please review [our security policy](../../security/policy) on how to report secu
 - [Freek Van der Herten](https://github.com/freekmurze)
 - [All Contributors](../../contributors)
 
+This package contains code copied from [Laravel's `Arr` class](https://github.com/laravel/framework/blob/9.x/src/Illuminate/Collections/Arr.php).
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
