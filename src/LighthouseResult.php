@@ -158,4 +158,9 @@ class LighthouseResult
     {
         return $this->audit('cumulative-layout-shift')['numericValue'];
     }
+
+    public function lighthouseVersion(): string
+    {
+        return $this->rawResults('lhr.lighthouseVersion');
+    }
 }
