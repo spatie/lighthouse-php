@@ -40,4 +40,4 @@ jobs:
         run: npm install lighthouse
 
       - name: Execute tests
-        run: vendor/bin/pest
+        run: composer test
