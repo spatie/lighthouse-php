@@ -3,7 +3,6 @@
 namespace Spatie\Lighthouse\Exceptions;
 
 use Exception;
-use Spatie\Lighthouse\Enums\Category;
 
 class InvalidUrl extends Exception
 {
