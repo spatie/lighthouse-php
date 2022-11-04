@@ -15,7 +15,7 @@ This package makes it easy to run Lighthouse using PHP. Here's an example on how
 use Spatie\Lighthouse\Lighthouse;
 
 // returns an instance of Spatie\Lighthouse\LighthouseResult
-$result = Lighthouse::url('https://example.com');
+$result = Lighthouse::url('https://example.com')->run();
 
 $result->scores(); // returns an array like this one:
 /*
