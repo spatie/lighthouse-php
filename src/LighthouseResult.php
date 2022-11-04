@@ -2,8 +2,8 @@
 
 namespace Spatie\Lighthouse;
 
-use Spatie\Lighthouse\Support\Arr;
 use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {

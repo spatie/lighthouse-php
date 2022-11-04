@@ -19,6 +19,6 @@ it('will throw an exception when passing an invalid url', function () {
     Lighthouse::url('invalid-url');
 })->throws(InvalidUrl::class);
 
-it('can get the scores of a real site', function() {
+it('can get the scores of a real site', function () {
     Lighthouse::url('https://freek.dev')->getResult()->scores();
 });
