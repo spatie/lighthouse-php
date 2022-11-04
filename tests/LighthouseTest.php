@@ -121,4 +121,3 @@ it('can disable throttling the network', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableNetworkThrottling'))->toBeTrue();
 });
-
