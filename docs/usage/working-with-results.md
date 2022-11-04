@@ -62,6 +62,28 @@ To get the results of all audits in one go, call, `audits()`
 $result->audits();
 ```
 
+## Performance metrics convenience methods
+
+There are a few convenience methods to get the most interesting metrics for the performance category.
+
+You can call all these methods on `$result`. The ones ending on `inMs` return results in milliseconds.
+
+- `firstContentfulPaintInMs()`
+- `largestContentfulPaintInMs()`
+- `speedIndexInMs()`
+- `totalBlockingTimeInMs()`
+- `timeToInteractiveInMs()`
+- `cumulativeLayoutShift()`
+
+These methods all have equivalent methods that return a formatted result. So instead of milliseconds they return a formatted string like `1.3 s`
+
+- `formattedFirstContentfulPaint()`
+- `formattedLargestContentfulPaint()`
+- `formattedSpeedIndex()`
+- `formattedTotalBlockingTime()`
+- `formattedTimeToInteractive()`
+- `formattedCumulativeLayoutShift()`
+
 ## Getting the configuration used to generate the result
 
 The result will also contain the settings that were used to run Lighthouse.

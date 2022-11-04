@@ -94,3 +94,39 @@ it('can get a specific audit', function () {
 it('will throw an exception when getting a non-existing audit', function () {
     $this->lighthouseResult->audit('non-existing-audit-name');
 })->throws(AuditDoesNotExist::class);
+
+it('can get the first contentful paint values', function() {
+    expect($this->lighthouseResult)
+        ->firstContentfulPaintInMs()->toEqual(1262.95)
+        ->formattedFirstContentfulPaint()->toEqual('1.3 s');
+});
+
+it('can get the largest contentful paint values', function() {
+    expect($this->lighthouseResult)
+        ->largestContentfulPaintInMs()->toEqual(1262.951)
+        ->formattedLargestContentfulPaint()->toEqual('1.3 s');
+});
+
+it('can get the speed index', function() {
+    expect($this->lighthouseResult)
+        ->speedIndexInMs()->toEqual(1258)
+        ->formattedSpeedIndex()->toEqual('1.3 s');
+});
+
+it('can get the total blocking time', function() {
+    expect($this->lighthouseResult)
+        ->totalBlockingTimeInMs()->toEqual(0)
+        ->formattedTotalBlockingTime()->toEqual('0 ms');
+});
+
+it('can get the time to interactive', function() {
+    expect($this->lighthouseResult)
+        ->timeToInteractiveInMs()->toEqual(1262.9499999389648)
+        ->formattedTimeToInteractive()->toEqual('1.3 s');
+});
+
+it('can get the cumulative layout shift', function() {
+    expect($this->lighthouseResult)
+        ->cumulativeLayoutShift()->toEqual(0)
+        ->formattedCumulativeLayoutShift()->toEqual(0);
+});

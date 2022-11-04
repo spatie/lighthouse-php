@@ -98,4 +98,64 @@ class LighthouseResult
     {
         return array_keys($this->audits());
     }
+
+    public function formattedFirstContentfulPaint(): string
+    {
+        return $this->audit('first-contentful-paint')['displayValue'];
+    }
+
+    public function firstContentfulPaintInMs(): float
+    {
+        return $this->audit('first-contentful-paint')['numericValue'];
+    }
+
+    public function formattedLargestContentfulPaint(): string
+    {
+        return $this->audit('largest-contentful-paint')['displayValue'];
+    }
+
+    public function largestContentfulPaintInMs(): float
+    {
+        return $this->audit('largest-contentful-paint')['numericValue'];
+    }
+
+    public function formattedSpeedIndex(): string
+    {
+        return $this->audit('speed-index')['displayValue'];
+    }
+
+    public function speedIndexInMs(): float
+    {
+        return $this->audit('speed-index')['numericValue'];
+    }
+
+    public function formattedTotalBlockingTime(): string
+    {
+        return $this->audit('total-blocking-time')['displayValue'];
+    }
+
+    public function totalBlockingTimeInMs(): float
+    {
+        return $this->audit('total-blocking-time')['numericValue'];
+    }
+
+    public function formattedTimeToInteractive(): string
+    {
+        return $this->audit('interactive')['displayValue'];
+    }
+
+    public function timeToInteractiveInMs(): float
+    {
+        return $this->audit('interactive')['numericValue'];
+    }
+
+    public function formattedCumulativeLayoutShift(): float
+    {
+        return $this->audit('cumulative-layout-shift')['displayValue'];
+    }
+
+    public function cumulativeLayoutShift(): float
+    {
+        return $this->audit('cumulative-layout-shift')['numericValue'];
+    }
 }
