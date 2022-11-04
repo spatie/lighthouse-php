@@ -7,7 +7,27 @@
 [![Tests](https://github.com/spatie/lighthouse-php/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/spatie/lighthouse-php/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/lighthouse-php.svg?style=flat-square)](https://packagist.org/packages/spatie/lighthouse-php)
 
-Coming soon...
+[Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) is an open-source, automated tool for improving the quality of web pages. It has audits for performance, accessibility, progressive web apps, SEO and more.
+
+This package makes it easy to run Lighthouse using PHP. Here's an example on how to get the scores of the five categories of audits that Lighthouse offers.
+
+```php
+use Spatie\Lighthouse\Lighthouse;
+
+// returns an instance of Spatie\Lighthouse\LighthouseResult
+$result = Lighthouse::url('https://example.com');
+
+$result->scores(); // returns an array like this one:
+/*
+ * [
+ *    'performance' => 98,
+ *    'accessibility' => 83,
+ *    'best-practices' => 90,
+ *    'seo' => 92,
+ *    'pwa' => 43,  
+ * ]
+ */
+```
 
 ## Support us
 
