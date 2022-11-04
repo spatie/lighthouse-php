@@ -6,7 +6,6 @@ use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
 use Spatie\Lighthouse\Exceptions\InvalidEnumValue;
 use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Lighthouse;
-
 use function Spatie\Snapshots\assertMatchesSnapshot;
 
 beforeEach(function () {
@@ -121,4 +120,3 @@ it('can disable throttling the network', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableNetworkThrottling'))->toBeTrue();
 });
-

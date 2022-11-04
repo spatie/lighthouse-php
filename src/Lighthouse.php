@@ -14,7 +14,9 @@ use Symfony\Component\Process\Process;
 class Lighthouse
 {
     protected string $url;
+
     protected array $lighthouseConfig = [];
+
     protected array $chromeOptions = [];
 
     public static function url(string $url): self
@@ -147,7 +149,7 @@ class Lighthouse
 
         $process = new Process(
             command: $command,
-            cwd: __DIR__ . '/../bin',
+            cwd: __DIR__.'/../bin',
             timeout: null,
         );
 

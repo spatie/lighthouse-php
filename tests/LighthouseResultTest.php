@@ -2,9 +2,7 @@
 
 use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\LighthouseResult;
-
 use function Spatie\Snapshots\assertMatchesSnapshot;
-
 use Spatie\TemporaryDirectory\TemporaryDirectory;
 
 beforeEach(function () {

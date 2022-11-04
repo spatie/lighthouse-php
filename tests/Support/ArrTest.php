@@ -14,7 +14,7 @@ it('can get an element from an array', function (string $key, mixed $expectedRes
     expect(Arr::get($array, $key))->toEqual($expectedResult);
 })->with([
     ['a', 'value-a'],
-    ['b', ['c' => 'value-c','d' => 'value-d']],
+    ['b', ['c' => 'value-c', 'd' => 'value-d']],
     ['b.c', 'value-c'],
     ['unknown', null],
 ]);

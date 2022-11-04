@@ -8,9 +8,8 @@ use Exception;
 class InvalidEnumValue extends Exception
 {
     /**
-     * @param string $invalidValue
-     * @param class-string<BackedEnum> $enumClass
-     *
+     * @param  string  $invalidValue
+     * @param  class-string<BackedEnum>  $enumClass
      * @return static
      */
     public static function make(string $invalidValue, string $enumClass): self
