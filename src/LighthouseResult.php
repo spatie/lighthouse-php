@@ -4,6 +4,7 @@ namespace Spatie\Lighthouse;
 
 use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Enums\FormFactor;
+use Spatie\Lighthouse\Exceptions\AuditDoesNotExist;
 use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
@@ -80,5 +81,26 @@ class LighthouseResult
     public function rawResults(): array
     {
         return $this->rawResults;
+    }
+
+    public function audits(): array
+    {
+        return $this->rawResults['report'][0]['audits'];
+    }
+
+    public function audit(string $auditName): array
+    {
+        $audit = $this->audits()[$auditName] ?? null;
+
+        if (is_null($audit)) {
+            throw AuditDoesNotExist::make($auditName);
+        }
+
+        return $audit;
+    }
+
+    public function auditNames(): array
+    {
+        return array_keys($this->audits());
     }
 }

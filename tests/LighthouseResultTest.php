@@ -1,6 +1,7 @@
 <?php
 
 use Spatie\Lighthouse\Enums\FormFactor;
+use Spatie\Lighthouse\Exceptions\AuditDoesNotExist;
 use Spatie\Lighthouse\LighthouseResult;
 use function Spatie\Snapshots\assertMatchesSnapshot;
 use Spatie\TemporaryDirectory\TemporaryDirectory;
@@ -73,3 +74,24 @@ it('can determine if cpu throttling was enabled', function () {
 it('can get the user agent', function () {
     expect($this->lighthouseResult->userAgent())->toContain('Chrome-Lighthouse');
 });
+
+it('can get all audit names', function() {
+   expect($this->lighthouseResult->auditNames())->toHaveCount(152);
+
+    expect($this->lighthouseResult->auditNames()[0])->toEqual('is-on-https');
+});
+
+it('can get all audits', function() {
+    assertMatchesSnapshot($this->lighthouseResult->audits());
+});
+
+it('can get a specific audit', function() {
+    $audit = $this->lighthouseResult->audit('first-contentful-paint');
+
+    expect($audit['title'])->toEqual('First Contentful Paint');
+    expect($audit['displayValue'])->toEqual('1.3 s');
+});
+
+it('will throw an exception when getting a non-existing audit', function() {
+    $this->lighthouseResult->audit('non-existing-audit-name');
+})->throws(AuditDoesNotExist::class);
