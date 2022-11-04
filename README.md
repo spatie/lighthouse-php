@@ -1,13 +1,13 @@
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/support-ukraine.svg?t=1" />](https://supportukrainenow.org)
 
-# Programatically run Google Lighthouse using PHP
+# Programmatically run Google Lighthouse using PHP
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/lighthouse-php.svg?style=flat-square)](https://packagist.org/packages/spatie/lighthouse-php)
 [![Tests](https://github.com/spatie/lighthouse-php/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/spatie/lighthouse-php/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/spatie/lighthouse-php.svg?style=flat-square)](https://packagist.org/packages/spatie/lighthouse-php)
 
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Coming soon...
 
 ## Support us
 
@@ -27,10 +27,7 @@ composer require spatie/lighthouse-php
 
 ## Usage
 
-```php
-$skeleton = new Spatie\Lighthouse();
-echo $skeleton->echoPhrase('Hello, Spatie!');
-```
+Coming soon...
 
 ## Testing
 

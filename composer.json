@@ -1,6 +1,6 @@
 {
     "name": "spatie/lighthouse-php",
-    "description": "Programatically run Google Lighthouse using PHP",
+    "description": "Programmatically run Google Lighthouse using PHP",
     "keywords": [
         "spatie",
         "lighthouse-php"
@@ -20,6 +20,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
         "pestphp/pest": "^1.20",
+        "spatie/pest-plugin-snapshots": "^1.1",
         "spatie/ray": "^1.28"
     },
     "autoload": {
