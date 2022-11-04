@@ -1,5 +1,6 @@
 <?php
 
+use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Lighthouse;
 
 use function Spatie\Snapshots\assertMatchesSnapshot;
@@ -13,3 +14,7 @@ it('will use the default config by default', function () {
 
     assertMatchesSnapshot($arguments);
 });
+
+it('will throw an exception when passing an invalid url', function () {
+    Lighthouse::url('invalid-url');
+})->throws(InvalidUrl::class);

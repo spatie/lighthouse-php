@@ -4,6 +4,7 @@ namespace Spatie\Lighthouse;
 
 use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
+use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Exceptions\LighthouseReportedError;
 use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
@@ -21,6 +22,12 @@ class Lighthouse
 
     public function __construct(string $url)
     {
+        $validatedUrl = filter_var($url, FILTER_VALIDATE_URL);
+
+        if (! $validatedUrl) {
+            throw InvalidUrl::make($url);
+        }
+
         $this->url = $url;
         $this->lighthouseConfig = $this->defaultLighthouseConfig();
         $this->chromeOptions = $this->defaultChromeOptions();
