@@ -1,6 +1,6 @@
 <?php
 
-use Spatie\Lighthouse\Enums\Device;
+use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\LighthouseResult;
 
 use function Spatie\Snapshots\assertMatchesSnapshot;
@@ -61,7 +61,7 @@ it('can get the configSettings', function () {
 });
 
 it('can get the emulated form factor', function () {
-    expect($this->lighthouseResult->emulatedFormFactor())->toEqual(Device::Desktop);
+    expect($this->lighthouseResult->emulatedFormFactor())->toEqual(FormFactor::Desktop);
 });
 
 it('can determine if network throttling was enabled', function () {

@@ -3,7 +3,7 @@
 namespace Spatie\Lighthouse;
 
 use Spatie\Lighthouse\Enums\Category;
-use Spatie\Lighthouse\Enums\Device;
+use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
@@ -27,9 +27,9 @@ class LighthouseResult
         return ! $this->configSettings('disableNetworkThrottling');
     }
 
-    public function emulatedFormFactor(): Device
+    public function emulatedFormFactor(): FormFactor
     {
-        return Device::from($this->configSettings('emulatedFormFactor'));
+        return FormFactor::from($this->configSettings('emulatedFormFactor'));
     }
 
     public function scores(): array

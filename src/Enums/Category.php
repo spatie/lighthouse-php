@@ -2,7 +2,7 @@
 
 namespace Spatie\Lighthouse\Enums;
 
-use Spatie\Lighthouse\Exceptions\InvalidCategory;
+use Spatie\Lighthouse\Enums\Concerns\EnumMethods;
 
 enum Category: string
 {
@@ -12,21 +12,5 @@ enum Category: string
     case Seo = 'seo';
     case ProgressiveWebApp = 'pwa';
 
-    public static function values(): array
-    {
-        return array_map(function (Category $category) {
-            return $category->value;
-        }, Category::cases());
-    }
-
-    public static function fromString(string $value): self
-    {
-        $enum = self::tryFrom($value);
-
-        if (! $enum) {
-            throw InvalidCategory::make($value);
-        }
-
-        return $enum;
-    }
+    use EnumMethods;
 }

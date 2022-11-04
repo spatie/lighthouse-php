@@ -1,8 +1,9 @@
 <?php
 
 use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
-use Spatie\Lighthouse\Exceptions\InvalidCategory;
+use Spatie\Lighthouse\Exceptions\InvalidEnumValue;
 use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Lighthouse;
 
@@ -68,7 +69,7 @@ it('can accept the categories a an array of strings', function () {
 
 it('will throw an exception when passing an invalid category', function () {
     $this->lighthouse->categories('invalid-category');
-})->throws(InvalidCategory::class);
+})->throws(InvalidEnumValue::class);
 
 it('can manually set the lighthouse config', closure: function () {
     $config = ['my-key' => 'my-value'];
@@ -89,3 +90,10 @@ it('can manually set the Chrome options', function () {
 it('will thrown a dedicated exception when lighthouse cannot run', function () {
     $this->lighthouse->withConfig(['invalid-config'])->run();
 })->throws(CouldNotRunLighthouse::class);
+
+it('can set a form factor', function () {
+    $this->lighthouse->formFactor(FormFactor::Mobile);
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.emulatedFormFactor'))
+        ->toEqual(FormFactor::Mobile->value);
+});

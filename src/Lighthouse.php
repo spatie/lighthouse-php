@@ -3,6 +3,7 @@
 namespace Spatie\Lighthouse;
 
 use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
 use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Exceptions\LighthouseReportedError;
@@ -78,6 +79,15 @@ class Lighthouse
         return $this;
     }
 
+    public function formFactor(string|FormFactor $formFactor)
+    {
+        if (is_string($formFactor)) {
+            $formFactor = FormFactor::fromString($formFactor);
+        }
+
+        $this->lighthouseConfig['settings']['emulatedFormFactor'] = $formFactor->value;
+    }
+
     public function withConfig(array $lighthouseConfig): self
     {
         $this->lighthouseConfig = $lighthouseConfig;
@@ -131,7 +141,7 @@ class Lighthouse
         return new LighthouseResult($result);
     }
 
-    public function lighthouseScriptArguments(string $key = null): array
+    public function lighthouseScriptArguments(string $key = null): mixed
     {
         return Arr::get([
             'url' => $this->url,
