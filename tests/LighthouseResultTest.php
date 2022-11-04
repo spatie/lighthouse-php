@@ -134,3 +134,7 @@ it('can get the cumulative layout shift', function () {
 it('can get the lighthouse version', function () {
     expect($this->lighthouseResult->lighthouseVersion())->toEqual('9.6.8');
 });
+
+it('can get the total page size in bytes', function() {
+    expect($this->lighthouseResult->totalPageSizeInBytes())->toEqual(850);
+});

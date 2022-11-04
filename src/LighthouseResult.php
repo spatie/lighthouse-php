@@ -163,4 +163,9 @@ class LighthouseResult
     {
         return $this->rawResults('lhr.lighthouseVersion');
     }
+
+    public function totalPageSizeInBytes(): int
+    {
+        return $this->audit('total-byte-weight')['numericValue'];
+    }
 }

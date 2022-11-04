@@ -76,8 +76,9 @@ You can call all these methods on `$result`. The ones ending on `inMs` return re
 - `totalBlockingTimeInMs()`
 - `timeToInteractiveInMs()`
 - `cumulativeLayoutShift()`
+- `totalPageSizeInBytes()`
 
-These methods all have equivalent methods that return a formatted result. So instead of milliseconds they return a formatted string like `1.3 s`
+Some of these methods have equivalent methods that return a formatted result. So instead of milliseconds they return a formatted string like `1.3 s`
 
 - `formattedFirstContentfulPaint()`
 - `formattedLargestContentfulPaint()`
