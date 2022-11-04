@@ -29,6 +29,44 @@ $result->scores(); // returns an array like this one:
  */
 ```
 
+It's easy to configure various options:
+
+```php
+use Spatie\Lighthouse\Lighthouse;
+use Spatie\Lighthouse\Enums\Category;
+
+Lighthouse::url('https://example.com')
+    ->userAgent('My user agent')
+    ->headers(['MyExtraHeader' => 'HeaderValue'])
+    ->categories(Category::Performance, Category::Accessibility)
+    ->throttleCpu()
+    ->run();
+```
+
+Here's how you can get the results of an audit:
+
+```php
+$result->audit('First Contentful Paint') // returns this array
+
+/*
+ * [
+ *     'id' => 'first-contentful-paint'
+ *     'title' => 'First Contentful Paint'
+ *     'score' => 0.98
+ *     'scoreDisplayMode' => 'numeric'
+ *     'numericValue' => 1262.95
+ *     'numericUnit' => 'millisecond'
+ *     'displayValue' => '1.3 s'
+ * ]
+ */
+```
+
+You can also write a full HTML report to disk:
+
+```php
+$result->saveHtml($pathToReport)
+```
+
 ## Support us
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/lighthouse-php.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/lighthouse-php)
@@ -37,24 +75,9 @@ We invest a lot of resources into creating [best in class open source packages](
 
 We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
-## Installation
+## Documentation
 
-You can install the package via composer:
-
-```bash
-composer require spatie/lighthouse-php
-```
-
-This package relies on the `lighthouse` and `chrome-launcher` js package being available on your system. In most cases you can accomplish this by issues these commands in your project.
-
-```bash
-npm install lighthouse
-npm install chrome-launcher
-```
-
-## Usage
-
-Coming soon...
+All documentation is available [on our documentation site](https://spatie.be/docs/lighthouse-php).
 
 ## Testing
 
