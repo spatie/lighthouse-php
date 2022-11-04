@@ -2,7 +2,7 @@
 
 namespace Spatie\Lighthouse;
 
-use Illuminate\Support\Arr;
+use Spatie\Lighthouse\Support\Arr;
 use Spatie\Lighthouse\Enums\Category;
 
 class LighthouseResult

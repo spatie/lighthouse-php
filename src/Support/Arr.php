@@ -10,12 +10,12 @@ class Arr
             return $array;
         }
 
-        if (array_key_exists($key, $array)) {
+        if (isset($array[$key])) {
             return $array[$key];
         }
 
         foreach (explode('.', $key) as $segment) {
-            if (array_key_exists($key, $array)) {
+            if (array_key_exists($segment, $array)) {
                 $array = $array[$segment];
             } else {
                 return $default;
