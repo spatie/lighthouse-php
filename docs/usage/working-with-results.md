@@ -31,6 +31,8 @@ $result->scores(); // returns an array like this one:
 
 ## Getting audit results
 
+Lighthouse will run various audits on your website. You can learn more about the meaning of each audit in [the Lighthouse docs](https://developer.chrome.com/docs/lighthouse/overview).
+
 You can get an array with names of all audits using the `auditNames()` method.
 
 ```php
