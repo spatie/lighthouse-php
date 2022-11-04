@@ -10,9 +10,7 @@ trait EnumMethods
 {
     public static function values(): array
     {
-        return array_map(function (BackedEnum $category) {
-            return $category->value;
-        }, self::cases());
+        return array_map(fn (BackedEnum $category) => $category->value, self::cases());
     }
 
     public static function fromString(string $value): self
