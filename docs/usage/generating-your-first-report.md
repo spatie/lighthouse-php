@@ -12,7 +12,7 @@ use Spatie\Lighthouse\Lighthouse;
 $result = Lighthouse::url('https://example.com')->run();
 ```
 
-You can get the `scores` method to get scores of the five categories Lighthouse runs audits for.
+You can use the `scores` method to get scores of the five categories Lighthouse runs audits for.
 
 ```php
 $result->scores(); // returns an array like this one:

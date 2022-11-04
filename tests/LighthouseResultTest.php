@@ -22,17 +22,12 @@ it('can get the scores', function () {
     ]);
 });
 
-it('can get the json results', function () {
-    assertMatchesSnapshot($this->lighthouseResult->json());
+it('can get the results', function () {
+    assertMatchesSnapshot($this->lighthouseResult->get());
 });
 
 it('can get a certain property of the json results', function () {
-    expect($this->lighthouseResult->json('categories.accessibility.score'))->toEqual(0.92);
-});
-
-it('the get methods produces the same results as json', function () {
-    expect($this->lighthouseResult->json('categories.accessibility.score'))
-        ->toEqual($this->lighthouseResult->get('categories.accessibility.score'));
+    expect($this->lighthouseResult->get('categories.accessibility.score'))->toEqual(0.92);
 });
 
 it('can get the html', function () {
@@ -50,7 +45,11 @@ it('can save the html', function () {
 });
 
 it('can return the raw results', function () {
-    expect($this->lighthouseResult->rawResults)->toEqual(getJsonStub('example-com-result'));
+    expect($this->lighthouseResult->rawResults())->toEqual(getJsonStub('example-com-result'));
+});
+
+it('can get a specific key of the raw results', function () {
+    expect($this->lighthouseResult->rawResults('lhr.lighthouseVersion'))->toEqual('9.6.8');
 });
 
 it('can get the configSettings', function () {

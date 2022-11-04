@@ -9,7 +9,7 @@ use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {
-    public function __construct(public array $rawResults)
+    public function __construct(protected array $rawResults)
     {
     }
 
@@ -54,7 +54,7 @@ class LighthouseResult
         return array_filter($scores);
     }
 
-    public function json(string $path = null): mixed
+    public function get(string $path = null): mixed
     {
         $report = $this->rawResults['report'][0];
 
@@ -73,14 +73,9 @@ class LighthouseResult
         return $this;
     }
 
-    public function get(string $path): mixed
+    public function rawResults(string $key = null): mixed
     {
-        return $this->json($path);
-    }
-
-    public function rawResults(): array
-    {
-        return $this->rawResults;
+        return Arr::get($this->rawResults, $key);
     }
 
     public function audits(): array
