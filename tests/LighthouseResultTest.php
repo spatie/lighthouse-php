@@ -70,6 +70,6 @@ it('can determine if cpu throttling was enabled', function () {
     expect($this->lighthouseResult->cpuThrottlingWasEnabled())->toBeFalse();
 });
 
-it('can get the user agent', function() {
-   expect($this->lighthouseResult->userAgent())->toContain('Chrome-Lighthouse');
+it('can get the user agent', function () {
+    expect($this->lighthouseResult->userAgent())->toContain('Chrome-Lighthouse');
 });
