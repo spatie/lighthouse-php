@@ -62,6 +62,13 @@ class Lighthouse
         ];
     }
 
+    public function userAgent(string $userAgent): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.emulatedUserAgent', $userAgent);
+
+        return $this;
+    }
+
     public function categories(Category|string|array ...$categories): self
     {
         if (is_array($categories[0])) {

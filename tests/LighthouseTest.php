@@ -120,3 +120,9 @@ it('can disable throttling the network', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableNetworkThrottling'))->toBeTrue();
 });
+
+it('can set the user agent', function() {
+   $this->lighthouse->userAgent('my-user-agent');
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.emulatedUserAgent'))->toEqual('my-user-agent');
+});

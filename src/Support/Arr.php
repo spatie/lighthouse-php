@@ -25,7 +25,7 @@ class Arr
         return $array;
     }
 
-    public static function set(&$array, $key, $value)
+    public static function set(array &$array, ?string $key, mixed $value): array
     {
         if (is_null($key)) {
             return $array = $value;

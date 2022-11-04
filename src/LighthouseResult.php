@@ -32,6 +32,11 @@ class LighthouseResult
         return FormFactor::from($this->configSettings('emulatedFormFactor'));
     }
 
+    public function userAgent(): string
+    {
+        return $this->configSettings('emulatedUserAgent');
+    }
+
     public function scores(): array
     {
         $scores = [];
