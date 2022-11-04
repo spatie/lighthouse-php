@@ -69,6 +69,13 @@ class Lighthouse
         return $this;
     }
 
+    public function headers(array $headers): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.extraHeaders', $headers);
+
+        return $this;
+    }
+
     public function categories(Category|string|array ...$categories): self
     {
         if (is_array($categories[0])) {

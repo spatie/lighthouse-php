@@ -37,6 +37,11 @@ class LighthouseResult
         return $this->configSettings('emulatedUserAgent');
     }
 
+    public function headers(): array
+    {
+        return $this->configSettings('extraHeaders') ?? [];
+    }
+
     public function scores(): array
     {
         $scores = [];
