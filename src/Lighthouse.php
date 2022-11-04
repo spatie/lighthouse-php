@@ -164,7 +164,7 @@ class Lighthouse
         $process = new Process(
             command: $command,
             cwd: __DIR__.'/../bin',
-            timeout: null,
+            timeout: null, // TODO: add support for setting timeout
         );
 
         $process->run();
