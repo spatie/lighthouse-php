@@ -1,6 +1,8 @@
 <?php
 
 use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
+use Spatie\Lighthouse\Exceptions\InvalidCategory;
 use Spatie\Lighthouse\Exceptions\InvalidUrl;
 use Spatie\Lighthouse\Lighthouse;
 
@@ -64,6 +66,10 @@ it('can accept the categories a an array of strings', function () {
     ]);
 });
 
+it('will throw an exception when passing an invalid category', function () {
+    $this->lighthouse->categories('invalid-category');
+})->throws(InvalidCategory::class);
+
 it('can manually set the lighthouse config', closure: function () {
     $config = ['my-key' => 'my-value'];
 
@@ -79,3 +85,7 @@ it('can manually set the Chrome options', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('chromeOptions'))->toEqual($chromeOptions);
 });
+
+it('will thrown a dedicated exception when lighthouse cannot run', function () {
+    $this->lighthouse->withConfig(['invalid-config'])->run();
+})->throws(CouldNotRunLighthouse::class);
