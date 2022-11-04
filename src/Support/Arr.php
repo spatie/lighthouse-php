@@ -55,7 +55,7 @@ class Arr
         return $array;
     }
 
-    public static function without(array $array, string $value)
+    public static function without(array $array, string $value): array
     {
         $key = array_search($value, $array);
 
