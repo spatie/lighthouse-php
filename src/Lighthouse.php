@@ -106,7 +106,7 @@ class Lighthouse
 
         $process = new Process(
             command: $command,
-            cwd: __DIR__ . '/../bin/lighthouse.js',
+            cwd: __DIR__ . '/../bin',
             timeout: null,
         );
 
