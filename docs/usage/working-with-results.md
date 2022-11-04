@@ -9,7 +9,7 @@ Running Lighthouse will return an instance of `Spatie\Lighthouse\LighthouseResul
 use Spatie\Lighthouse\Lighthouse;
 
 // instance of `Spatie\Lighthouse\LighthouseResult`
-$result = Lighthouse::url('https://example.com')
+$result = Lighthouse::url('https://example.com');
 ```
 
 ## Getting the category scores
@@ -42,7 +42,7 @@ $allAuditNames = $result->auditNames();
 Here's how you can get the results of an audit:
 
 ```php
-$result->audit('first-contentful-paint') 
+$result->audit('first-contentful-paint'); 
 
 /*  returns an array like this one.
  * 
@@ -123,5 +123,5 @@ You can a specific value from the raw results by passing a key using dot notatio
 
 ```php
 // returns the lighthouse version
-$result->rawResults('lhr.lighthouseVersion')
+$result->rawResults('lhr.lighthouseVersion');
 ```

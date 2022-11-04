@@ -30,9 +30,10 @@ $result->scores(); // returns an array like this one:
 Here's how you can get the results of an audit:
 
 ```php
-$result->audit('first-contentful-paint') // returns this array
+$result->audit('first-contentful-paint');
 
-/*
+/* returns this array
+*
  * [
  *     'id' => 'first-contentful-paint'
  *     'title' => 'First Contentful Paint'
