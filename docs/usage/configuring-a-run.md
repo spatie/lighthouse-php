@@ -106,7 +106,7 @@ If you don't call this method, we'll use these options by default.
 ];
 ```
 
-To get a hold of the default options, you can call `defaultLighthouseConfig()`
+To get a hold of the default options, you can call `defaultLighthouseConfig()`.
 
 ## Customize the Chrome options
 
@@ -130,5 +130,5 @@ If you don't call this method, we'll use these options by default.
 ],
 ```
 
-To get a hold of the default options, you can call `defaultChromeOptions()`
+To get a hold of the default options, you can call `defaultChromeOptions()`.
 
