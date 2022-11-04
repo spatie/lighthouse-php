@@ -1,6 +1,6 @@
 ---
 title: v1
-slogan: Monitor the health of a Laravel application
+slogan: Run Google Lighthouse using PHP
 githubUrl: https://github.com/spatie/lighthouse-php
 branch: main
 ---
