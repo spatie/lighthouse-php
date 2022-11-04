@@ -125,6 +125,8 @@ class Lighthouse
             );
         }
 
+        $result['report'][0] = json_decode($result['report'][0], true);
+
         return new LighthouseResult($result);
     }
 

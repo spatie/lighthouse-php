@@ -13,4 +13,5 @@ vendor
 node_modules
 package.json
 yarn.lock
+tests/temp
 

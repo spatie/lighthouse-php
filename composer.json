@@ -21,7 +21,8 @@
         "friendsofphp/php-cs-fixer": "^3.0",
         "pestphp/pest": "^1.20",
         "spatie/pest-plugin-snapshots": "^1.1",
-        "spatie/ray": "^1.28"
+        "spatie/ray": "^1.28",
+        "spatie/temporary-directory": "^2.1"
     },
     "autoload": {
         "psr-4": {

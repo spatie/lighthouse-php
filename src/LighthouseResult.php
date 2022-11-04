@@ -3,13 +3,33 @@
 namespace Spatie\Lighthouse;
 
 use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Enums\Device;
 use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {
     public function __construct(public array $rawResults)
     {
-        $this->rawResults['report'][0] = json_decode($this->rawResults['report'][0], true);
+    }
+
+    public function configSettings(string $key = null): mixed
+    {
+        return Arr::get($this->rawResults['lhr']['configSettings'], $key);
+    }
+
+    public function networkThrottlingWasEnabled(): bool
+    {
+        return ! $this->configSettings('disableNetworkThrottling');
+    }
+
+    public function cpuThrottlingWasEnabled(): bool
+    {
+        return ! $this->configSettings('disableNetworkThrottling');
+    }
+
+    public function emulatedFormFactor(): Device
+    {
+        return Device::from($this->configSettings('emulatedFormFactor'));
     }
 
     public function scores(): array
