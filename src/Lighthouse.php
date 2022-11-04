@@ -86,7 +86,7 @@ class Lighthouse
         }
 
         $this->lighthouseConfig['settings']['emulatedFormFactor'] = $formFactor->value;
-        
+
         return $this;
     }
 
