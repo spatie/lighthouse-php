@@ -55,6 +55,42 @@ class Arr
         return $array;
     }
 
+    public static function forget(array &$array, string|array $keys)
+    {
+        $original = &$array;
+
+        $keys = (array) $keys;
+
+        if (count($keys) === 0) {
+            return;
+        }
+
+        foreach ($keys as $key) {
+            if (isset($array[$key])) {
+                unset($array[$key]);
+
+                continue;
+            }
+
+            $parts = explode('.', $key);
+
+            // clean up before each pass
+            $array = &$original;
+
+            while (count($parts) > 1) {
+                $part = array_shift($parts);
+
+                if (isset($array[$part])) {
+                    $array = &$array[$part];
+                } else {
+                    continue 2;
+                }
+            }
+
+            unset($array[array_shift($parts)]);
+        }
+    }
+
     public static function without(array $array, string $value): array
     {
         $key = array_search($value, $array);

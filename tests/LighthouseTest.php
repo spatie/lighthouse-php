@@ -126,3 +126,33 @@ it('can set the user agent', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.emulatedUserAgent'))->toEqual('my-user-agent');
 });
+
+it('can be configured to run only one audit', function() {
+    $this->lighthouse->onlyAudits('is-on-https');
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.onlyCategories'))->toBeNull();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.onlyAudits'))->toEqual(['is-on-https']);
+});
+
+it('can be configured to run only a few audits', function() {
+    $this->lighthouse->onlyAudits('is-on-https', 'structured-data');
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.onlyCategories'))->toBeNull();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.onlyAudits'))->toEqual([
+        'is-on-https',
+        'structured-data',
+    ]);
+});
+
+it('can be configured to run only a few audits using an array', function() {
+    $this->lighthouse->onlyAudits(['is-on-https', 'structured-data']);
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.onlyCategories'))->toBeNull();
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.onlyAudits'))->toEqual([
+        'is-on-https',
+        'structured-data',
+    ]);
+});

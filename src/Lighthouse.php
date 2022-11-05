@@ -21,6 +21,8 @@ class Lighthouse
 
     protected int $timeoutInSeconds = 60;
 
+    protected ?array $onlyAudits = null;
+
     public static function url(string $url): self
     {
         return new self($url);
@@ -93,6 +95,18 @@ class Lighthouse
         }, $categories);
 
         Arr::set($this->lighthouseConfig, 'settings.onlyCategories', $categories);
+
+        return $this;
+    }
+
+    public function onlyAudits(array|string ...$auditNames): self
+    {
+        if (is_array($auditNames[0])) {
+            $auditNames = $auditNames[0];
+        }
+
+        Arr::set($this->lighthouseConfig, 'settings.onlyAudits', $auditNames);
+        Arr::forget($this->lighthouseConfig, 'settings.onlyCategories');
 
         return $this;
     }
