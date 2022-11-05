@@ -13,7 +13,7 @@ $result = Lighthouse::url('https://example.com')
     ->run();
 ```
 
-## Only run audits for certain categories
+## Only run audits in certain categories
 
 By default, Lighthouse will run audits of all categories. To only run the audits of certain categories, call `categories()` and pass it one or more categories you are interested in.
 
@@ -24,6 +24,46 @@ use Spatie\Lighthouse\Lighthouse;
 $result = Lighthouse::url('https://example.com')
     ->categories(Category::BestPractices, Category::Seo)
     ->run();
+```
+
+## Skip certain audits
+
+To lower Lighthouse's execution time, you can opt to skip audits by passing their names to `skipAudits`.
+
+```php
+use Spatie\Lighthouse\Lighthouse;
+
+$result = Lighthouse::url('https://example.com')
+    ->skipAudits(['is-on-https', 'service-worker'])
+    // ...
+```
+
+## Only run specific audits
+
+You can opt to run only specific audits using the `onlyAudits()` method.
+
+```php
+use Spatie\Lighthouse\Lighthouse;
+
+$result = Lighthouse::url('https://example.com')
+    // only these two audits can be run
+    ->onlyAudits(['is-on-https', 'service-worker'])
+    // ...
+```
+
+You cannot use `skipAudits` and `onlyAudits` at the same time.
+
+If you want to run a specific audit and an entire other category. You must call `categories()` after `onlyAudits()`.
+
+In this example we are going to run the `is-on-https` audit together with all audits from the `Seo` category.
+
+```php
+use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Lighthouse;
+
+$result = Lighthouse::url('https://example.com')
+    ->onlyAudits('is-on-https')
+    ->categories(Category::Seo)
 ```
 
 ## Customizing the user agent
