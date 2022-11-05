@@ -91,9 +91,9 @@ class Arr
         }
     }
 
-    public static function without(array $array, string $value): array
+    public static function without(array $array, mixed $value): array
     {
-        $key = array_search($value, $array);
+        $key = array_search($value, $array, true);
 
         if ($key !== false) {
             unset($array[$key]);

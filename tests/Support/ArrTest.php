@@ -65,3 +65,22 @@ it('can remove an element from an array', function (string|array $key, array $ex
     ['unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
     ['unknown.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
 ]);
+
+it('can return a new array without a given value', function ($value, $expectedResult) {
+    $array = ['string', 123, 4.56, null, true];
+
+    expect(Arr::without($array, $value))->toEqual($expectedResult);
+})->with([
+    ['string', [1 => 123, 2 => 4.56, 3 => null, 4 => true]],
+    [123, [0 => 'string', 2 => 4.56, 3 => null, 4 => true]],
+    [4.56, [0 => 'string', 1 => 123, 3 => null, 4 => true]],
+    [null, [0 => 'string', 1 => 123, 2 => 4.56, 4 => true]],
+    [true, [0 => 'string', 1 => 123, 2 => 4.56, 3 => null]],
+]);
+
+it('can return a new array without a given value without changing the original one', function () {
+    $array = ['value-a', 'value-b'];
+
+    expect(Arr::without($array, 'value-a'))->toEqual([1 => 'value-b']);
+    expect($array)->toEqual(['value-a', 'value-b']);
+});
