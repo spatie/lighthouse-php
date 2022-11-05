@@ -33,3 +33,34 @@ it('can get a nullish element from an array', function () {
     expect(Arr::get($array, 'a', 'default'))->toBeNull();
     expect(Arr::get($array, 'key.with.dots', 'default'))->toBeNull();
 });
+
+it('can return a default value for non-existing keys', function () {
+    $array = [
+        'a' => 'value',
+    ];
+
+    expect(Arr::get($array, 'unknown', 'default'))->toBe('default');
+});
+
+it('can remove an element from an array', function (string $key, array $expectedResult) {
+    $array = [
+        'a' => 'value-a',
+        'b' => [
+            'c' => 'value-c',
+            'd' => 'value-d',
+        ],
+        'e' => null,
+    ];
+
+    Arr::forget($array, $key);
+
+    expect($array)->toEqual($expectedResult);
+})->with([
+    ['a', ['b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
+    ['b', ['a' => 'value-a', 'e' => null]],
+    ['b.c', ['a' => 'value-a', 'b' => ['d' => 'value-d'], 'e' => null]],
+    ['b.c.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
+    ['e', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d']]],
+    ['unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
+    ['unknown.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
+]);
