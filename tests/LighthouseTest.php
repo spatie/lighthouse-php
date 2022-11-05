@@ -156,3 +156,24 @@ it('can be configured to run only a few audits using an array', function() {
         'structured-data',
     ]);
 });
+
+it('can skip an audit', function() {
+   $this->lighthouse->skipAudits('is-on-https');
+
+   expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.skipAudits'))
+       ->toEqual(['is-on-https']);
+});
+
+it('can skip multiple audits', function() {
+    $this->lighthouse->skipAudits('is-on-https', 'service-worker');
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.skipAudits'))
+        ->toEqual(['is-on-https', 'service-worker']);
+});
+
+it('can skip multiple audits using an array', function() {
+    $this->lighthouse->skipAudits('is-on-https', 'service-worker');
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.skipAudits'))
+        ->toEqual(['is-on-https', 'service-worker']);
+});

@@ -111,6 +111,17 @@ class Lighthouse
         return $this;
     }
 
+    public function skipAudits(array|string ...$auditNames): self
+    {
+        if (is_array($auditNames[0])) {
+            $auditNames = $auditNames[0];
+        }
+
+        Arr::set($this->lighthouseConfig, 'settings.skipAudits', $auditNames);
+
+        return $this;
+    }
+
     public function formFactor(string|FormFactor $formFactor): self
     {
         if (is_string($formFactor)) {
