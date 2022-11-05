@@ -66,7 +66,7 @@ class Arr
         }
 
         foreach ($keys as $key) {
-            if (isset($array[$key])) {
+            if (array_key_exists($key, $array)) {
                 unset($array[$key]);
 
                 continue;
