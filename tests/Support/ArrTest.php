@@ -42,7 +42,7 @@ it('can return a default value for non-existing keys', function () {
     expect(Arr::get($array, 'unknown', 'default'))->toBe('default');
 });
 
-it('can remove an element from an array', function (string $key, array $expectedResult) {
+it('can remove an element from an array', function (string|array $key, array $expectedResult) {
     $array = [
         'a' => 'value-a',
         'b' => [
@@ -61,6 +61,7 @@ it('can remove an element from an array', function (string $key, array $expected
     ['b.c', ['a' => 'value-a', 'b' => ['d' => 'value-d'], 'e' => null]],
     ['b.c.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
     ['e', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d']]],
+    [['a','b'], ['e' => null]],
     ['unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
     ['unknown.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
 ]);
