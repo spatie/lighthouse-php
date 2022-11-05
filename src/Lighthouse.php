@@ -19,6 +19,8 @@ class Lighthouse
 
     protected array $chromeOptions = [];
 
+    protected int $timeoutInSeconds = 60;
+
     public static function url(string $url): self
     {
         return new self($url);
@@ -148,6 +150,13 @@ class Lighthouse
         return $this;
     }
 
+    public function timeoutInSeconds(int $timeout): self
+    {
+        $this->timeoutInSeconds = $timeout;
+
+        return $this;
+    }
+
     public function run(): LighthouseResult
     {
         $arguments = $this->lighthouseScriptArguments();
@@ -164,7 +173,7 @@ class Lighthouse
         $process = new Process(
             command: $command,
             cwd: __DIR__.'/../bin',
-            timeout: null, // TODO: add support for setting timeout
+            timeout: $this->timeoutInSeconds,
         );
 
         $process->run();

@@ -132,3 +132,16 @@ If you don't call this method, we'll use these options by default.
 
 To get a hold of the default options, you can call `defaultChromeOptions()`.
 
+## Setting a timeout
+
+By default, if the lighthouse process takes more than 60 seconds it will be aborted and a `Symfony\Component\Process\Exception\ProcessTimedOutException` will be thrown.
+
+You can adjust the timeout using the `timeoutInSeconds()` method.
+
+```php
+use Spatie\Lighthouse\Lighthouse;
+
+$result = Lighthouse::url('https://example.com')
+    ->timeoutInSeconds(120) // allow to run 120 seconds
+    ->run();
+```
