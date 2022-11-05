@@ -18,3 +18,18 @@ it('can get an element from an array', function (string $key, mixed $expectedRes
     ['b.c', 'value-c'],
     ['unknown', null],
 ]);
+
+it('can get a nullish element from an array', function () {
+    $array = [
+        'a' => null,
+        'key.with.dots' => null,
+        'key' => [
+            'with' => [
+                'dots' => 'value',
+            ],
+        ],
+    ];
+
+    expect(Arr::get($array, 'a', 'default'))->toBeNull();
+    expect(Arr::get($array, 'key.with.dots', 'default'))->toBeNull();
+});

@@ -10,7 +10,7 @@ class Arr
             return $array;
         }
 
-        if (isset($array[$key])) {
+        if (array_key_exists($key, $array)) {
             return $array[$key];
         }
 
