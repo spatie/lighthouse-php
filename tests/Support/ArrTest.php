@@ -61,7 +61,7 @@ it('can remove an element from an array', function (string|array $key, array $ex
     ['b.c', ['a' => 'value-a', 'b' => ['d' => 'value-d'], 'e' => null]],
     ['b.c.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
     ['e', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d']]],
-    [['a','b'], ['e' => null]],
+    [['a', 'b'], ['e' => null]],
     ['unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
     ['unknown.unknown', ['a' => 'value-a', 'b' => ['c' => 'value-c', 'd' => 'value-d'], 'e' => null]],
 ]);
