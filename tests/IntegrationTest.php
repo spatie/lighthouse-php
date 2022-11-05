@@ -15,7 +15,7 @@ it('can get the scores of a real site', function () {
     expect($scores)->toHaveKeys($expectedCategories);
 });
 
-it('will throw an exception when the process times out', function() {
+it('will throw an exception when the process times out', function () {
     Lighthouse::url('https://example.com')
         ->timeoutInSeconds(1)
         ->run();
