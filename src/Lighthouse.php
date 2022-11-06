@@ -146,9 +146,14 @@ class Lighthouse
         return $this;
     }
 
-    public function throttleCpu(): self
+    public function throttleCpu(int $multiplier = null): self
     {
         Arr::set($this->lighthouseConfig, 'settings.disableCpuThrottling', false);
+        Arr::set($this->lighthouseConfig, 'settings.throttlingMethod', 'simulate');
+
+        if (! is_null($multiplier)) {
+            Arr::set($this->lighthouseConfig, 'settings.throttling.cpuSlowdownMultiplier', $multiplier);
+        }
 
         return $this;
     }

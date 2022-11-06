@@ -118,6 +118,8 @@ $result = Lighthouse::url('https://example.com')
     ->run();
 ```
 
+Optionally, you can pass a `cpuSlowdownMultiplier` as an int to `throttleCpu()`. The higher the number, the more throttling is applied. You'll find more information on this number [in the lighthouse docs](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling).
+
 ## Customize the Lighthouse configuration
 
 To have fine-grained control of which options will be sent to lighthouse, you can pass an array of options to  `withConfig`.
