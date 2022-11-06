@@ -173,4 +173,17 @@ class LighthouseResult
     {
         return $this->rawResults('lhr.environment.benchmarkIndex');
     }
+
+    public function budgetResults(): array
+    {
+        $budgetResults = [];
+
+        foreach($this->auditNames() as $auditName) {
+            if (str_ends_with($auditName, '-budget')) {
+                $budgetResults[$auditName] = $this->audit($auditName);
+            }
+        }
+
+        return $budgetResults;
+    }
 }

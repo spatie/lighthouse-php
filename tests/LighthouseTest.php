@@ -177,3 +177,20 @@ it('can skip multiple audits using an array', function () {
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.skipAudits'))
         ->toEqual(['is-on-https', 'service-worker']);
 });
+
+it('can accept budgets', function() {
+   $budgets = [
+       [
+           'timings' => [
+               [
+                   'metric' => 'interactive',
+                   'budget' => 5000,
+               ],
+           ],
+       ],
+   ];
+
+   $this->lighthouse->budgets($budgets);
+
+   expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.budgets'))->toEqual($budgets);
+});
