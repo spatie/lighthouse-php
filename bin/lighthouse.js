@@ -21,7 +21,7 @@ const chromeLauncher = require('chrome-launcher');
         lighthouseConfig,
     );
 
-    clearTimeout(killTimer)
+    clearTimeout(killTimer);
 
     await chrome.kill();
 
