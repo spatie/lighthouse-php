@@ -125,3 +125,12 @@ You can a specific value from the raw results by passing a key using dot notatio
 // returns the lighthouse version
 $result->rawResults('lhr.lighthouseVersion');
 ```
+
+## Getting the benchmark index
+
+Lighthouse computes a benchmark index as a rough approximation of the host device's CPU performance.
+
+```php
+$result->benchmarkIndex(); // returns an integer
+```
+

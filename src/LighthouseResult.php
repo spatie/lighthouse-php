@@ -168,4 +168,9 @@ class LighthouseResult
     {
         return $this->audit('total-byte-weight')['numericValue'];
     }
+
+    public function benchmarkIndex(): int
+    {
+        return $this->rawResults('lhr.environment.benchmarkIndex');
+    }
 }

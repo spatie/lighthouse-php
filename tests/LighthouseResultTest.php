@@ -138,3 +138,7 @@ it('can get the lighthouse version', function () {
 it('can get the total page size in bytes', function () {
     expect($this->lighthouseResult->totalPageSizeInBytes())->toEqual(850);
 });
+
+it('can get the benchmark index', function() {
+   expect($this->lighthouseResult->benchmarkIndex())->toEqual(2670);
+});
