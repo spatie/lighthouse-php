@@ -1,6 +1,7 @@
 url: 'https://example.com'
 chromeOptions:
-    chromeFlags: ['--headless', '--no-sandbox']
+    chromeFlags: ['--headless']
 lighthouseConfig:
     extends: 'lighthouse:default'
     settings: { onlyCategories: [performance, accessibility, best-practices, seo, pwa], emulatedFormFactor: desktop, output: [json, html], disableNetworkThrottling: true, disableCpuThrottling: true, throttlingMethod: provided }
+timeout: 59300
