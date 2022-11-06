@@ -178,7 +178,7 @@ class LighthouseResult
     {
         $budgetResults = [];
 
-        foreach($this->auditNames() as $auditName) {
+        foreach ($this->auditNames() as $auditName) {
             if (str_ends_with($auditName, '-budget')) {
                 $budgetResults[$auditName] = $this->audit($auditName);
             }

@@ -32,7 +32,7 @@ class Lighthouse
     {
         $validatedUrl = filter_var($url, FILTER_VALIDATE_URL);
 
-        if (!$validatedUrl) {
+        if (! $validatedUrl) {
             throw InvalidUrl::make($url);
         }
 
@@ -158,7 +158,7 @@ class Lighthouse
         Arr::set($this->lighthouseConfig, 'settings.disableCpuThrottling', false);
         Arr::set($this->lighthouseConfig, 'settings.throttlingMethod', 'simulate');
 
-        if (!is_null($multiplier)) {
+        if (! is_null($multiplier)) {
             Arr::set($this->lighthouseConfig, 'settings.throttling.cpuSlowdownMultiplier', $multiplier);
         }
 
@@ -208,7 +208,7 @@ class Lighthouse
 
         $process = new Process(
             command: $command,
-            cwd: __DIR__ . '/../bin',
+            cwd: __DIR__.'/../bin',
             timeout: $this->timeoutInSeconds,
         );
 
@@ -216,7 +216,7 @@ class Lighthouse
 
         $result = json_decode($process->getOutput(), true);
 
-        if (!is_array($result)) {
+        if (! is_array($result)) {
             throw CouldNotRunLighthouse::make($process->getErrorOutput());
         }
 

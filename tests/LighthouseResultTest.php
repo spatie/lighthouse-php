@@ -143,9 +143,9 @@ it('can get the benchmark index', function () {
     expect($this->lighthouseResult->benchmarkIndex())->toEqual(2670);
 });
 
-it('can get the budget results', function() {
+it('can get the budget results', function () {
     expect($this->lighthouseResult->budgetResults())->toHaveKeys([
         'performance-budget',
         'timing-budget',
-    ]) ;
+    ]);
 });
