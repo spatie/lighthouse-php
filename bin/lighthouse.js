@@ -9,13 +9,19 @@ const chromeLauncher = require('chrome-launcher');
         logLevel: 'info',
         port: chrome.port,
     };
+
     const lighthouseConfig = arguments[2];
+    const timeoutInMs = arguments[3];
+
+    const killTimer = setTimeout(() => chrome.kill(), timeoutInMs);
 
     const runnerResult = await lighthouse(
         requestedUrl,
         lighthouseOptions,
         lighthouseConfig,
     );
+
+    clearTimeout(killTimer)
 
     await chrome.kill();
 

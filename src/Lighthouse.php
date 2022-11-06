@@ -227,6 +227,7 @@ class Lighthouse
             'url' => $this->url,
             'chromeOptions' => $this->chromeOptions,
             'lighthouseConfig' => $this->lighthouseConfig,
+            'timeout' => ($this->timeoutInSeconds * 1000) - 700,
         ], $key);
     }
 }
