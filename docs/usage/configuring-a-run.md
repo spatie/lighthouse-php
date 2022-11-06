@@ -80,7 +80,7 @@ $result = Lighthouse::url('https://example.com')
 
 ## Setting extra headers
 
-You can specify headers to will be sent along with all requests.
+You can specify headers that will be sent along with all requests.
 
 ```php
 use Spatie\Lighthouse\Lighthouse;

@@ -10,7 +10,7 @@ class Arr
             return $array;
         }
 
-        if (isset($array[$key])) {
+        if (array_key_exists($key, $array)) {
             return $array[$key];
         }
 
@@ -66,7 +66,7 @@ class Arr
         }
 
         foreach ($keys as $key) {
-            if (isset($array[$key])) {
+            if (array_key_exists($key, $array)) {
                 unset($array[$key]);
 
                 continue;
@@ -80,7 +80,7 @@ class Arr
             while (count($parts) > 1) {
                 $part = array_shift($parts);
 
-                if (isset($array[$part])) {
+                if (isset($array[$part]) && is_array($array[$part])) {
                     $array = &$array[$part];
                 } else {
                     continue 2;
@@ -91,9 +91,9 @@ class Arr
         }
     }
 
-    public static function without(array $array, string $value): array
+    public static function without(array $array, mixed $value): array
     {
-        $key = array_search($value, $array);
+        $key = array_search($value, $array, true);
 
         if ($key !== false) {
             unset($array[$key]);
