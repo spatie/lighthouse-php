@@ -61,7 +61,6 @@ class Lighthouse
         return [
             'chromeFlags' => [
                 '--headless',
-                '--no-sandbox',
             ],
         ];
     }
