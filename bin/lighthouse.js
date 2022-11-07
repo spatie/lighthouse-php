@@ -25,5 +25,5 @@ const chromeLauncher = require('chrome-launcher');
 
     await chrome.kill();
 
-    process.stdout.write(JSON.stringify(runnerResult));
+    process.stdout.write(JSON.stringify(runnerResult ?? {}));
 })();

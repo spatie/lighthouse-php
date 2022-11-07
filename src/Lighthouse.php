@@ -172,6 +172,20 @@ class Lighthouse
         return $this;
     }
 
+    public function gather($artifactsDir = ''): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.gatherMode', $artifactsDir);
+
+        return $this;
+    }
+
+    public function audit($artifactsDir = ''): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.auditMode', $artifactsDir);
+
+        return $this;
+    }
+
     public function withConfig(array $lighthouseConfig): self
     {
         $this->lighthouseConfig = $lighthouseConfig;
