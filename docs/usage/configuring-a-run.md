@@ -120,29 +120,16 @@ $result = Lighthouse::url('https://example.com')
 
 Optionally, you can pass a `cpuSlowdownMultiplier` as an int to `throttleCpu()`. The higher the number, the more throttling is applied. You'll find more information on this number [in the lighthouse docs](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling).
 
-## Save artifacts to disk
+## Store artifacts to disk
 
-By default, Lighthouse will not save the artifacts to disk. To enable this, use the `gather()` method.
-
-
-```php
-use Spatie\Lighthouse\Lighthouse;
-
-$result = Lighthouse::url('https://example.com')
-    ->gather(__DIR__.'/path/to/artifacts/dir')
-    ->run();
-```
-
-## Process saved artifacts
-
-If you have saved artifacts from a previous run, you can process them using `audit()`.
+By default, Lighthouse will not save the artifacts to disk. To enable this, use the `storeArtifactsInDirectory()` method.
 
 
 ```php
 use Spatie\Lighthouse\Lighthouse;
 
 $result = Lighthouse::url('https://example.com')
-    ->audit(__DIR__.'/path/to/artifacts/dir')
+    ->storeArtifactsInDirectory(__DIR__.'/path/to/artifacts/dir')
     ->run();
 ```
 
