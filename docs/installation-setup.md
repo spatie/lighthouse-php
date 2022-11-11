@@ -15,3 +15,9 @@ This package relies on the `lighthouse` and `chrome-launcher` js package being a
 npm install lighthouse
 npm install chrome-launcher
 ```
+
+Chromium should also be available on the server. On modern versions of Ubuntu, you can do that with this command:
+
+```bash
+sudo apt install chromium-browser
+```
