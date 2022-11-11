@@ -61,6 +61,11 @@ class LighthouseResult
         return Arr::get($report, $path);
     }
 
+    public function toArray(string $path = null): mixed
+    {
+        return $this->get($path);
+    }
+
     public function html(): string
     {
         return $this->rawResults['report'][1];
