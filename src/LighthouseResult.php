@@ -57,12 +57,20 @@ class LighthouseResult
         return $this->configSettings('extraHeaders') ?? [];
     }
 
-    public function scores(): array
+    public function scores(Category|string $category = null): array|int
     {
+        if ($category && is_string($category)) {
+            $category = Category::fromString($category);
+        }
+
         $scores = [];
 
-        foreach (Category::values() as $category) {
-            $scores[$category] = intval($this->get("categories.$category.score") * 100);
+        foreach (Category::values() as $categoryName) {
+            $scores[$categoryName] = intval($this->get("categories.$categoryName.score") * 100);
+        }
+
+        if ($category) {
+            return $scores[$category->value];
         }
 
         return array_filter($scores);

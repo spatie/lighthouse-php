@@ -1,5 +1,6 @@
 <?php
 
+use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Exceptions\AuditDoesNotExist;
 use Spatie\Lighthouse\LighthouseResult;
@@ -20,6 +21,11 @@ it('can get the scores', function () {
         'seo' => 91,
         'pwa' => 30,
     ]);
+});
+
+it('can get a single score', function() {
+    expect($this->lighthouseResult->scores(Category::Accessibility))->toBe(92);
+    expect($this->lighthouseResult->scores(Category::Accessibility->value))->toBe(92);
 });
 
 it('can get the results', function () {
