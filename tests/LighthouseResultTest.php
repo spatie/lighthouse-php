@@ -23,7 +23,7 @@ it('can get the scores', function () {
     ]);
 });
 
-it('can get a single score', function() {
+it('can get a single score', function () {
     expect($this->lighthouseResult->scores(Category::Accessibility))->toBe(92);
     expect($this->lighthouseResult->scores(Category::Accessibility->value))->toBe(92);
 });
