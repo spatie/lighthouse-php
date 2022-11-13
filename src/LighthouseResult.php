@@ -9,13 +9,27 @@ use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {
-    public function __construct(protected array $rawResults)
+    public function __construct(protected array $rawResults = [])
     {
+    }
+
+    public function setJsonReport(array $jsonReport): self
+    {
+        $this->rawResults['report'][0] = $jsonReport;
+
+        return $this;
+    }
+
+    public function setHtmlReport(string $htmlReport): self
+    {
+        $this->rawResults['report'][1] = $htmlReport;
+
+        return $this;
     }
 
     public function configSettings(string $key = null): mixed
     {
-        return Arr::get($this->rawResults['lhr']['configSettings'], $key);
+        return Arr::get($this->rawResults['report'][0]['configSettings'], $key);
     }
 
     public function networkThrottlingWasEnabled(): bool
@@ -166,7 +180,7 @@ class LighthouseResult
 
     public function lighthouseVersion(): string
     {
-        return $this->rawResults('lhr.lighthouseVersion');
+        return $this->rawResults('report.0.lighthouseVersion');
     }
 
     public function totalPageSizeInBytes(): int
@@ -176,7 +190,7 @@ class LighthouseResult
 
     public function benchmarkIndex(): int
     {
-        return $this->rawResults('lhr.environment.benchmarkIndex');
+        return $this->rawResults('report.0.environment.benchmarkIndex');
     }
 
     public function budgetResults(): array
