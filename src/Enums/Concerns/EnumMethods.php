@@ -23,4 +23,9 @@ trait EnumMethods
 
         return $enum;
     }
+
+    public function label(): string
+    {
+        return str_replace('-', ' ', $this->value);
+    }
 }
