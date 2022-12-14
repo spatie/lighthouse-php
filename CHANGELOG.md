@@ -2,6 +2,10 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.0.0 - 2022-12-14
+
+- initial release
+
 ## 0.0.9 - 2022-11-13
 
 - experimental version
