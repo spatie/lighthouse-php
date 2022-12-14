@@ -60,5 +60,5 @@ $result->audit('first-contentful-paint') // returns this array
 You can also write a full HTML report to disk:
 
 ```php
-$result->saveHtml($pathToReport)
+$result->saveHtml($pathToReport);
 ```
