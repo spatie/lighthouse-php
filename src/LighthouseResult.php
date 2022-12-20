@@ -126,64 +126,64 @@ class LighthouseResult
         return array_keys($this->audits());
     }
 
-    public function formattedFirstContentfulPaint(): string
+    public function formattedFirstContentfulPaint(): ?string
     {
-        return $this->audit('first-contentful-paint')['displayValue'];
+        return $this->audit('first-contentful-paint')['displayValue'] ?? null;
     }
 
-    public function firstContentfulPaintInMs(): float
+    public function firstContentfulPaintInMs(): ?float
     {
-        return $this->audit('first-contentful-paint')['numericValue'];
+        return $this->audit('first-contentful-paint')['numericValue'] ?? null;
     }
 
-    public function formattedLargestContentfulPaint(): string
+    public function formattedLargestContentfulPaint(): ?string
     {
-        return $this->audit('largest-contentful-paint')['displayValue'];
+        return $this->audit('largest-contentful-paint')['displayValue'] ?? null;
     }
 
-    public function largestContentfulPaintInMs(): float
+    public function largestContentfulPaintInMs(): ?float
     {
-        return $this->audit('largest-contentful-paint')['numericValue'];
+        return $this->audit('largest-contentful-paint')['numericValue'] ?? null;
     }
 
-    public function formattedSpeedIndex(): string
+    public function formattedSpeedIndex(): ?string
     {
-        return $this->audit('speed-index')['displayValue'];
+        return $this->audit('speed-index')['displayValue'] ?? null;
     }
 
-    public function speedIndexInMs(): float
+    public function speedIndexInMs(): ?float
     {
-        return $this->audit('speed-index')['numericValue'];
+        return $this->audit('speed-index')['numericValue'] ?? null;
     }
 
-    public function formattedTotalBlockingTime(): string
+    public function formattedTotalBlockingTime(): ?string
     {
-        return $this->audit('total-blocking-time')['displayValue'];
+        return $this->audit('total-blocking-time')['displayValue'] ?? null;
     }
 
-    public function totalBlockingTimeInMs(): float
+    public function totalBlockingTimeInMs(): ?float
     {
-        return $this->audit('total-blocking-time')['numericValue'];
+        return $this->audit('total-blocking-time')['numericValue'] ?? null;
     }
 
-    public function formattedTimeToInteractive(): string
+    public function formattedTimeToInteractive(): ?string
     {
-        return $this->audit('interactive')['displayValue'];
+        return $this->audit('interactive')['displayValue'] ?? null;
     }
 
-    public function timeToInteractiveInMs(): float
+    public function timeToInteractiveInMs(): ?float
     {
-        return $this->audit('interactive')['numericValue'];
+        return $this->audit('interactive')['numericValue'] ?? null;
     }
 
-    public function formattedCumulativeLayoutShift(): float
+    public function formattedCumulativeLayoutShift(): ?float
     {
-        return $this->audit('cumulative-layout-shift')['displayValue'];
+        return $this->audit('cumulative-layout-shift')['displayValue'] ?? null;
     }
 
-    public function cumulativeLayoutShift(): float
+    public function cumulativeLayoutShift(): ?float
     {
-        return $this->audit('cumulative-layout-shift')['numericValue'];
+        return $this->audit('cumulative-layout-shift')['numericValue'] ?? null;
     }
 
     public function lighthouseVersion(): string
@@ -191,14 +191,14 @@ class LighthouseResult
         return $this->rawResults('report.0.lighthouseVersion');
     }
 
-    public function totalPageSizeInBytes(): int
+    public function totalPageSizeInBytes(): ?int
     {
-        return $this->audit('total-byte-weight')['numericValue'];
+        return $this->audit('total-byte-weight')['numericValue'] ?? null;
     }
 
-    public function benchmarkIndex(): int
+    public function benchmarkIndex(): ?int
     {
-        return $this->rawResults('report.0.environment.benchmarkIndex');
+        return $this->rawResults('report.0.environment.benchmarkIndex') ?? null;
     }
 
     public function budgetResults(): array
