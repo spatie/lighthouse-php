@@ -2,6 +2,12 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.0.1 - 2022-12-20
+
+- do not crash when report doesn't contain certain fields
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.0.0...1.0.1
+
 ## 1.0.0 - 2022-12-14
 
 - initial release
