@@ -57,7 +57,7 @@ class LighthouseResult
         return $this->configSettings('extraHeaders') ?? [];
     }
 
-    public function scores(Category|string $category = null): array|int
+    public function scores(Category|string $category = null): array|int|null
     {
         if ($category && is_string($category)) {
             $category = Category::fromString($category);

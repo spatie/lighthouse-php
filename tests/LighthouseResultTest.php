@@ -26,7 +26,6 @@ it('can get the scores', function () {
 
 it('will not return categories with a score of null', function () {
     $rawResult = getJsonStub('example-com-result');
-
     Arr::set($rawResult, 'report.0.categories.performance.score', null);
 
     $lighthouseResult = new LighthouseResult($rawResult);
@@ -40,8 +39,14 @@ it('will not return categories with a score of null', function () {
 });
 
 it('can get a single score', function () {
-    expect($this->lighthouseResult->scores(Category::Accessibility))->toBe(92);
-    expect($this->lighthouseResult->scores(Category::Accessibility->value))->toBe(92);
+    $rawResult = getJsonStub('example-com-result');
+    Arr::set($rawResult, 'report.0.categories.performance.score', null);
+
+    $lighthouseResult = new LighthouseResult($rawResult);
+
+    expect($lighthouseResult->scores(Category::Performance))->toBeNull();
+    expect($lighthouseResult->scores(Category::Accessibility))->toBe(92);
+    expect($lighthouseResult->scores(Category::Accessibility->value))->toBe(92);
 });
 
 it('can get the results', function () {
