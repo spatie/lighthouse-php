@@ -2,6 +2,16 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.0.3 - 2023-01-10
+
+- improve support for categories whose value is `null`
+
+### What's Changed
+
+- Bump aglipanci/laravel-pint-action from 1.0.0 to 2.1.0 by @dependabot in https://github.com/spatie/lighthouse-php/pull/12
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.0.2...1.0.3
+
 ## 1.0.2 - 2023-01-10
 
 **Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.0.1...1.0.2
