@@ -66,7 +66,13 @@ class LighthouseResult
         $scores = [];
 
         foreach (Category::values() as $categoryName) {
-            $scores[$categoryName] = intval($this->get("categories.$categoryName.score") * 100);
+            $value = $this->get("categories.$categoryName.score");
+
+            if (! is_null($value)) {
+                $value = intval($this->get("categories.$categoryName.score") * 100);
+            }
+
+            $scores[$categoryName] = $value;
         }
 
         if ($category) {
