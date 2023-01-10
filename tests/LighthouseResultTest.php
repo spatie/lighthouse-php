@@ -24,7 +24,7 @@ it('can get the scores', function () {
     ]);
 });
 
-it('will not return categories with a score of null', function() {
+it('will not return categories with a score of null', function () {
     $rawResult = getJsonStub('example-com-result');
 
     Arr::set($rawResult, 'report.0.categories.performance.score', null);
