@@ -4,6 +4,7 @@ use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Exceptions\AuditDoesNotExist;
 use Spatie\Lighthouse\LighthouseResult;
+use Spatie\Lighthouse\Support\Arr;
 use function Spatie\Snapshots\assertMatchesSnapshot;
 use Spatie\TemporaryDirectory\TemporaryDirectory;
 
@@ -16,6 +17,21 @@ beforeEach(function () {
 it('can get the scores', function () {
     expect($this->lighthouseResult->scores())->toEqual([
         'performance' => 100,
+        'accessibility' => 92,
+        'best-practices' => 100,
+        'seo' => 91,
+        'pwa' => 30,
+    ]);
+});
+
+it('will not return categories with a score of null', function() {
+    $rawResult = getJsonStub('example-com-result');
+
+    Arr::set($rawResult, 'report.0.categories.performance.score', null);
+
+    $lighthouseResult = new LighthouseResult($rawResult);
+
+    expect($lighthouseResult->scores())->toEqual([
         'accessibility' => 92,
         'best-practices' => 100,
         'seo' => 91,
