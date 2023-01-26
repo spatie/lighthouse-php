@@ -115,8 +115,8 @@ it('can throttle the network', function () {
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.disableNetworkThrottling'))->toBeFalse();
 });
 
-it('can add extra headers', function() {
-    $extraHeaders =[
+it('can add extra headers', function () {
+    $extraHeaders = [
         'X-My-Header' => 'my-value',
     ];
 
