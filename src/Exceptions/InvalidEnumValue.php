@@ -8,7 +8,6 @@ use Exception;
 class InvalidEnumValue extends Exception
 {
     /**
-     * @param  string  $invalidValue
      * @param  class-string<BackedEnum>  $enumClass
      * @return static
      */
