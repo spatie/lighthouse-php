@@ -180,7 +180,7 @@ it('can get the budget results', function () {
 it('can accept the json and html results', function () {
     $newLightHouseResult = (new LighthouseResult())
         ->setHtmlReport($this->lighthouseResult->html())
-         ->setJsonReport($this->lighthouseResult->get());
+        ->setJsonReport($this->lighthouseResult->get());
 
     expect($newLightHouseResult->html())->toBe($this->lighthouseResult->html());
     expect($newLightHouseResult->get())->toBe($this->lighthouseResult->get());
