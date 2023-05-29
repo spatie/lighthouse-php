@@ -10,7 +10,6 @@ psalm.xml
 vendor
 .php-cs-fixer.cache
 node_modules
-package.json
 yarn.lock
 tests/temp
 
