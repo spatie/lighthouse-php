@@ -2,6 +2,10 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.1.0 - 2023-07-31
+
+- add compatibility with ChromeLauncher v1.0.0
+
 ## 1.0.4 - 2023-02-28
 
 ### What's Changed
