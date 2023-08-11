@@ -2,6 +2,18 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.2.0 - 2023-08-11
+
+### What's Changed
+
+- support projects using ESM by adding a package.json with type commonjs by @Jonnx in https://github.com/spatie/lighthouse-php/pull/26
+
+### New Contributors
+
+- @Jonnx made their first contribution in https://github.com/spatie/lighthouse-php/pull/26
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.1.0...1.2.0
+
 ## 1.1.0 - 2023-07-31
 
 - add compatibility with ChromeLauncher v1.0.0
