@@ -3,7 +3,7 @@ output:
     - html
 maxWaitForFcp: 30000
 maxWaitForLoad: 45000
-formFactor: mobile
+formFactor: desktop
 throttling:
     rttMs: 150
     throughputKbps: 1638.4
