@@ -44,7 +44,7 @@ class LighthouseResult
 
     public function formFactor(): FormFactor
     {
-        return FormFactor::from($this->configSettings('emulatedFormFactor'));
+        return FormFactor::from($this->configSettings('formFactor'));
     }
 
     public function userAgent(): string

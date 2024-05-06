@@ -47,11 +47,14 @@ class Lighthouse
             'extends' => 'lighthouse:default',
             'settings' => [
                 'onlyCategories' => Category::values(),
-                'emulatedFormFactor' => 'desktop',
+                'formFactor' => 'desktop',
                 'output' => ['json', 'html'],
                 'disableNetworkThrottling' => true,
                 'disableCpuThrottling' => true,
                 'throttlingMethod' => 'provided',
+                'screenEmulation' => [
+                    'disabled' => true,
+                ]
             ],
         ];
     }
@@ -134,7 +137,17 @@ class Lighthouse
             $formFactor = FormFactor::fromString($formFactor);
         }
 
-        Arr::set($this->lighthouseConfig, 'settings.emulatedFormFactor', $formFactor->value);
+        Arr::set($this->lighthouseConfig, 'settings.formFactor', $formFactor->value);
+
+        return $this;
+    }
+
+    public function screenEmulation(?bool $mobile = false, ?bool $disabled = false, int $width = null, int $height = null, int $deviceScaleRatio = null): self
+    {
+        $screenEmulation = array_filter(compact('mobile', 'disabled', 'width', 'height', 'deviceScaleRatio'), function ($value) {
+            return $value !== null;
+        });
+        Arr::set($this->lighthouseConfig, 'settings.screenEmulation', $screenEmulation);
 
         return $this;
     }

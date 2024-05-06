@@ -93,8 +93,16 @@ it('will thrown a dedicated exception when lighthouse cannot run', function () {
 it('can set a form factor', function () {
     $this->lighthouse->formFactor(FormFactor::Mobile);
 
-    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.emulatedFormFactor'))
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.formFactor'))
         ->toEqual(FormFactor::Mobile->value);
+});
+
+it('can set a screen emulation', function () {
+    $screenEmulation = ['disabled' => true];
+    $this->lighthouse->screenEmulation($screenEmulation);
+
+    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.screenEmulation'))
+        ->toEqual($screenEmulation);
 });
 
 it('can throttle cpu', function () {
