@@ -27,7 +27,7 @@ class LighthouseResult
         return $this;
     }
 
-    public function configSettings(string $key = null): mixed
+    public function configSettings(?string $key = null): mixed
     {
         return Arr::get($this->rawResults['report'][0]['configSettings'], $key);
     }
@@ -57,7 +57,7 @@ class LighthouseResult
         return $this->configSettings('extraHeaders') ?? [];
     }
 
-    public function scores(Category|string $category = null): array|int|null
+    public function scores(Category|string|null $category = null): array|int|null
     {
         if ($category && is_string($category)) {
             $category = Category::fromString($category);
@@ -82,14 +82,14 @@ class LighthouseResult
         return array_filter($scores);
     }
 
-    public function get(string $path = null): mixed
+    public function get(?string $path = null): mixed
     {
         $report = $this->rawResults['report'][0];
 
         return Arr::get($report, $path);
     }
 
-    public function toArray(string $path = null): mixed
+    public function toArray(?string $path = null): mixed
     {
         return $this->get($path);
     }
@@ -106,7 +106,7 @@ class LighthouseResult
         return $this;
     }
 
-    public function rawResults(string $key = null): mixed
+    public function rawResults(?string $key = null): mixed
     {
         return Arr::get($this->rawResults, $key);
     }

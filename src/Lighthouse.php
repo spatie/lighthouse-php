@@ -54,7 +54,7 @@ class Lighthouse
                 'throttlingMethod' => 'provided',
                 'screenEmulation' => [
                     'disabled' => true,
-                ]
+                ],
             ],
         ];
     }
@@ -142,7 +142,7 @@ class Lighthouse
         return $this;
     }
 
-    public function screenEmulation(?bool $mobile = false, ?bool $disabled = false, int $width = null, int $height = null, int $deviceScaleRatio = null): self
+    public function screenEmulation(?bool $mobile = false, ?bool $disabled = false, ?int $width = null, ?int $height = null, ?int $deviceScaleRatio = null): self
     {
         $screenEmulation = array_filter(compact('mobile', 'disabled', 'width', 'height', 'deviceScaleRatio'), function ($value) {
             return $value !== null;
@@ -166,7 +166,7 @@ class Lighthouse
         return $this;
     }
 
-    public function throttleCpu(int $multiplier = null): self
+    public function throttleCpu(?int $multiplier = null): self
     {
         Arr::set($this->lighthouseConfig, 'settings.disableCpuThrottling', false);
         Arr::set($this->lighthouseConfig, 'settings.throttlingMethod', 'simulate');
@@ -245,7 +245,7 @@ class Lighthouse
         return new LighthouseResult($result);
     }
 
-    public function lighthouseScriptArguments(string $key = null): mixed
+    public function lighthouseScriptArguments(?string $key = null): mixed
     {
         return Arr::get([
             'url' => $this->url,
