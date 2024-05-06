@@ -2,6 +2,21 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.2.2 - 2024-05-06
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 4 to 5 by @dependabot in https://github.com/spatie/lighthouse-php/pull/33
+* Bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot in https://github.com/spatie/lighthouse-php/pull/40
+* Bump dependabot/fetch-metadata from 1.6.0 to 2.1.0 by @dependabot in https://github.com/spatie/lighthouse-php/pull/41
+* Updated to support desktop view by default by @JamesCobbledick in https://github.com/spatie/lighthouse-php/pull/42
+
+### New Contributors
+
+* @JamesCobbledick made their first contribution in https://github.com/spatie/lighthouse-php/pull/42
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.2.1...1.2.2
+
 ## 1.2.0 - 2023-08-11
 
 ### What's Changed
