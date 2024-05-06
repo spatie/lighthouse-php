@@ -99,8 +99,8 @@ it('can set a form factor', function () {
 });
 
 it('can set a screen emulation', function () {
-    $screenEmulation = ['disabled' => true];
-    $this->lighthouse->screenEmulation($screenEmulation);
+    $screenEmulation = ['mobile' => false, 'disabled' => true];
+    $this->lighthouse->screenEmulation(disabled: true);
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.screenEmulation'))
         ->toEqual($screenEmulation);
