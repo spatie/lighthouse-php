@@ -2,14 +2,20 @@
 
 namespace Spatie\Lighthouse;
 
-use Spatie\Lighthouse\Enums\Category;
-use Spatie\Lighthouse\Enums\FormFactor;
-use Spatie\Lighthouse\Exceptions\CouldNotRunLighthouse;
-use Spatie\Lighthouse\Exceptions\InvalidUrl;
-use Spatie\Lighthouse\Exceptions\LighthouseReportedError;
 use Spatie\Lighthouse\Support\Arr;
-use Symfony\Component\Process\ExecutableFinder;
-use Symfony\Component\Process\Process;
+use Spatie\Lighthouse\Enums\{
+    Category, 
+    FormFactor
+};
+use Spatie\Lighthouse\Exceptions\{
+    CouldNotRunLighthouse,
+    InvalidUrl,
+    LighthouseReportedError
+};
+use Symfony\Component\Process\{
+    ExecutableFinder,
+    Process
+};
 
 class Lighthouse
 {
