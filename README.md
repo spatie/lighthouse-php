@@ -2,7 +2,7 @@
     <a href="https://spatie.be/open-source?utm_source=github&utm_medium=banner&utm_campaign=lighthouse-php">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://spatie.be/packages/header/lighthouse-php/html/dark.webp">
-        <img alt="Logo for lighthouse-php" src="https://spatie.be/packages/header/lighthouse-php/html/light.webp" height="190">
+        <img alt="Logo for lighthouse-php" src="https://spatie.be/packages/header/lighthouse-php/html/light.webp">
       </picture>
     </a>
 
