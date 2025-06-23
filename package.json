@@ -1,3 +1,7 @@
 {
-    "type": "commonjs"
+    "type": "commonjs",
+    "dependencies": {
+        "chrome-launcher": "^1.2.0",
+        "lighthouse": "^12.6.1"
+    }
 }

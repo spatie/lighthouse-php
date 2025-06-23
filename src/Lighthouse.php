@@ -49,6 +49,7 @@ class Lighthouse
                 'onlyCategories' => Category::values(),
                 'formFactor' => 'desktop',
                 'output' => ['json', 'html'],
+                'gatherMode' => false,
                 'disableNetworkThrottling' => true,
                 'disableCpuThrottling' => true,
                 'throttlingMethod' => 'provided',
@@ -199,6 +200,13 @@ class Lighthouse
         return $this;
     }
 
+    public function saveHar(bool $saveHar = true): self
+    {
+        Arr::set($this->lighthouseConfig, 'settings.gatherMode', $saveHar);
+
+        return $this;
+    }
+
     public function timeoutInSeconds(int $timeout): self
     {
         $this->timeoutInSeconds = $timeout;
@@ -211,7 +219,7 @@ class Lighthouse
         $arguments = $this->lighthouseScriptArguments();
 
         $command = [
-            (new ExecutableFinder())->find('node', 'node', [
+            (new ExecutableFinder)->find('node', 'node', [
                 '/usr/local/bin',
                 '/opt/homebrew/bin',
             ]),

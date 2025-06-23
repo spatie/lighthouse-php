@@ -74,6 +74,18 @@ You can also write a full HTML report to disk:
 $result->saveHtml($pathToReport)
 ```
 
+You can save a HAR (HTTP Archive) file for network analysis:
+
+```php
+// Enable HAR file generation during the run
+$result = Lighthouse::url('https://example.com')
+    ->saveHar()
+    ->run();
+
+// Save the HAR file to disk
+$result->saveHar($pathToHarFile);
+```
+
 ## Support us
 
 [<img src="https://github-ads.s3.eu-central-1.amazonaws.com/lighthouse-php.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/lighthouse-php)

@@ -20,8 +20,8 @@
     },
     "require-dev": {
         "laravel/pint": "^1.2",
-        "pestphp/pest": "^1.22.1",
-        "spatie/pest-plugin-snapshots": "^1.1",
+        "pestphp/pest": "^3.0",
+        "spatie/pest-plugin-snapshots": "^2.1",
         "spatie/ray": "^1.36",
         "spatie/temporary-directory": "^2.1.1"
     },

@@ -2,6 +2,7 @@
 
 namespace Spatie\Lighthouse;
 
+use Exception;
 use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Exceptions\AuditDoesNotExist;
@@ -9,9 +10,7 @@ use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {
-    public function __construct(protected array $rawResults = [])
-    {
-    }
+    public function __construct(protected array $rawResults = []) {}
 
     public function setJsonReport(array $jsonReport): self
     {
@@ -102,6 +101,35 @@ class LighthouseResult
     public function saveHtml(string $path): self
     {
         file_put_contents($path, $this->html());
+
+        return $this;
+    }
+
+    public function har(): ?array
+    {
+        return $this->rawResults['artifacts']['DevtoolsLog'] ?? null;
+    }
+
+    public function saveHar(string $path): self
+    {
+        $harData = $this->har();
+
+        if ($harData === null) {
+            throw new Exception('HAR data not available. Make sure to call saveHar() on the Lighthouse instance before running.');
+        }
+
+        $harFormat = [
+            'log' => [
+                'version' => '1.2',
+                'creator' => [
+                    'name' => 'Lighthouse',
+                    'version' => $this->lighthouseVersion(),
+                ],
+                'entries' => $harData,
+            ],
+        ];
+
+        file_put_contents($path, json_encode($harFormat, JSON_PRETTY_PRINT));
 
         return $this;
     }
