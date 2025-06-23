@@ -23,8 +23,6 @@ class Lighthouse
 
     protected ?array $onlyAudits = null;
 
-    protected bool $harRequested = false;
-
     public static function url(string $url): self
     {
         return new self($url);
@@ -198,15 +196,6 @@ class Lighthouse
     public function withChromeOptions(array $chromeOptions): self
     {
         $this->chromeOptions = $chromeOptions;
-
-        return $this;
-    }
-
-    public function saveHar(): self
-    {
-        // DevtoolsLog (used for HAR) is collected by default in Lighthouse
-        // No special configuration needed - just track that HAR was requested
-        $this->harRequested = true;
 
         return $this;
     }
