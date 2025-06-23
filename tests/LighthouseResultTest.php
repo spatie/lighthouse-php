@@ -188,7 +188,7 @@ it('can accept the json and html results', function () {
 });
 
 it('returns null when HAR data is not available', function () {
-    expect($this->lighthouseResult->har())->toBeNull();
+    expect($this->lighthouseResult->devToolsLog())->toBeNull();
 });
 
 it('can save HAR file when HAR data is available', function () {

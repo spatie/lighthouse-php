@@ -105,33 +105,9 @@ class LighthouseResult
         return $this;
     }
 
-    public function har(): ?array
+    public function devToolsLog(): ?array
     {
         return $this->rawResults['artifacts']['DevtoolsLog'] ?? null;
-    }
-
-    public function saveHar(string $path): self
-    {
-        $harData = $this->har();
-
-        if ($harData === null) {
-            throw new Exception('HAR data not available. Make sure to call saveHar() on the Lighthouse instance before running.');
-        }
-
-        $harFormat = [
-            'log' => [
-                'version' => '1.2',
-                'creator' => [
-                    'name' => 'Lighthouse',
-                    'version' => $this->lighthouseVersion(),
-                ],
-                'entries' => $harData,
-            ],
-        ];
-
-        file_put_contents($path, json_encode($harFormat, JSON_PRETTY_PRINT));
-
-        return $this;
     }
 
     public function rawResults(?string $key = null): mixed

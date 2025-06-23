@@ -213,21 +213,3 @@ it('can accept budgets', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.budgets'))->toEqual($budgets);
 });
-
-it('can enable HAR file saving', function () {
-    $this->lighthouse->saveHar(true);
-
-    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.gatherMode'))->toBeTrue();
-});
-
-it('can disable HAR file saving', function () {
-    $this->lighthouse->saveHar(false);
-
-    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.gatherMode'))->toBeFalse();
-});
-
-it('enables HAR file saving by default when called without arguments', function () {
-    $this->lighthouse->saveHar();
-
-    expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.gatherMode'))->toBeTrue();
-});

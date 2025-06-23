@@ -25,5 +25,9 @@
 
     await chrome.kill();
 
-    process.stdout.write(JSON.stringify(runnerResult));
+    if (runnerResult) {
+        process.stdout.write(JSON.stringify(runnerResult));
+    } else {
+        process.stdout.write(JSON.stringify({ error: 'No results returned from lighthouse' }));
+    }
 })();

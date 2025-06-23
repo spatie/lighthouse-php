@@ -1,0 +1,1517 @@
+{
+  "fetchTime": "2025-06-23T22:19:10.120Z",
+  "Timing": [
+    {
+      "name": "lh:config",
+      "entryType": "measure",
+      "startTime": 899.071417093277,
+      "duration": 280.02208292484283,
+      "detail": null
+    },
+    {
+      "name": "lh:config:resolveArtifactsToDefns",
+      "entryType": "measure",
+      "startTime": 900.3007090091705,
+      "duration": 31.475790977478027,
+      "detail": null
+    },
+    {
+      "name": "lh:runner:gather",
+      "entryType": "measure",
+      "startTime": 1179.1939589977264,
+      "duration": 17374.53041601181,
+      "detail": null
+    },
+    {
+      "name": "lh:driver:connect",
+      "entryType": "measure",
+      "startTime": 1312.0799590349197,
+      "duration": 4.996582984924316,
+      "detail": null
+    },
+    {
+      "name": "lh:driver:navigate",
+      "entryType": "measure",
+      "startTime": 1317.219209074974,
+      "duration": 42.88012492656708,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getBenchmarkIndex",
+      "entryType": "measure",
+      "startTime": 1360.2420840263367,
+      "duration": 1003.0424159765244,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getVersion",
+      "entryType": "measure",
+      "startTime": 2363.5332090854645,
+      "duration": 0.7362909317016602,
+      "detail": null
+    },
+    {
+      "name": "lh:prepare:navigationMode",
+      "entryType": "measure",
+      "startTime": 2364.4295420646667,
+      "duration": 50.69912493228912,
+      "detail": null
+    },
+    {
+      "name": "lh:storage:clearDataForOrigin",
+      "entryType": "measure",
+      "startTime": 2375.018292069435,
+      "duration": 29.54408299922943,
+      "detail": null
+    },
+    {
+      "name": "lh:storage:clearBrowserCaches",
+      "entryType": "measure",
+      "startTime": 2404.6818749904633,
+      "duration": 9.369042038917542,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:prepareThrottlingAndNetwork",
+      "entryType": "measure",
+      "startTime": 2414.5139590501785,
+      "duration": 0.4984159469604492,
+      "detail": null
+    },
+    {
+      "name": "lh:driver:navigate",
+      "entryType": "measure",
+      "startTime": 2459.1925840377808,
+      "duration": 12209.462124943733,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:NetworkRecords",
+      "entryType": "measure",
+      "startTime": 14765.726374983788,
+      "duration": 0.30087506771087646,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:DevtoolsLog",
+      "entryType": "measure",
+      "startTime": 14766.253167033195,
+      "duration": 0.11237502098083496,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Trace",
+      "entryType": "measure",
+      "startTime": 14766.3770840168,
+      "duration": 0.017541050910949707,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Accessibility",
+      "entryType": "measure",
+      "startTime": 14766.400459051132,
+      "duration": 95.11558294296265,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:AnchorElements",
+      "entryType": "measure",
+      "startTime": 14861.55016708374,
+      "duration": 5.0729169845581055,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:ConsoleMessages",
+      "entryType": "measure",
+      "startTime": 14866.64295899868,
+      "duration": 0.052165985107421875,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:CSSUsage",
+      "entryType": "measure",
+      "startTime": 14866.706292033195,
+      "duration": 5.487833023071289,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Doctype",
+      "entryType": "measure",
+      "startTime": 14872.216250061989,
+      "duration": 0.813709020614624,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:DOMStats",
+      "entryType": "measure",
+      "startTime": 14873.039499998093,
+      "duration": 2.28895902633667,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:FontSize",
+      "entryType": "measure",
+      "startTime": 14875.340209007263,
+      "duration": 2.3655409812927246,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Inputs",
+      "entryType": "measure",
+      "startTime": 14877.727459073067,
+      "duration": 1.1407909393310547,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:ImageElements",
+      "entryType": "measure",
+      "startTime": 14878.879209041595,
+      "duration": 2.368250012397766,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:InspectorIssues",
+      "entryType": "measure",
+      "startTime": 14881.338083982468,
+      "duration": 0.12504100799560547,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:JsUsage",
+      "entryType": "measure",
+      "startTime": 14881.472125053406,
+      "duration": 0.03366696834564209,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:LinkElements",
+      "entryType": "measure",
+      "startTime": 14881.516542077065,
+      "duration": 1.2709169387817383,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:MainResource",
+      "entryType": "measure",
+      "startTime": 14882.659709095955,
+      "duration": 0.11654090881347656,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:MainDocumentContent",
+      "entryType": "measure",
+      "startTime": 14882.799334049225,
+      "duration": 0.7487499713897705,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:MetaElements",
+      "entryType": "measure",
+      "startTime": 14883.557834029198,
+      "duration": 1.312749981880188,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:NetworkUserAgent",
+      "entryType": "measure",
+      "startTime": 14884.884917020798,
+      "duration": 0.1332080364227295,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:OptimizedImages",
+      "entryType": "measure",
+      "startTime": 14885.03104197979,
+      "duration": 0.12245810031890869,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:ResponseCompression",
+      "entryType": "measure",
+      "startTime": 14885.164000034332,
+      "duration": 0.211542010307312,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:RobotsTxt",
+      "entryType": "measure",
+      "startTime": 14885.385750055313,
+      "duration": 2001.8106249570847,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Scripts",
+      "entryType": "measure",
+      "startTime": 16887.2928750515,
+      "duration": 0.22579193115234375,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:SourceMaps",
+      "entryType": "measure",
+      "startTime": 16887.573209047318,
+      "duration": 0.07587504386901855,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Stacks",
+      "entryType": "measure",
+      "startTime": 16887.67137503624,
+      "duration": 6.512959003448486,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:collectStacks",
+      "entryType": "measure",
+      "startTime": 16887.80391705036,
+      "duration": 6.350957989692688,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:Stylesheets",
+      "entryType": "measure",
+      "startTime": 16894.198042035103,
+      "duration": 3.6812920570373535,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:TraceElements",
+      "entryType": "measure",
+      "startTime": 16897.901750087738,
+      "duration": 140.95787489414215,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult",
+      "entryType": "measure",
+      "startTime": 16898.0350420475,
+      "duration": 126.54604196548462,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:ProcessedTrace",
+      "entryType": "measure",
+      "startTime": 16898.0808750391,
+      "duration": 11.183166980743408,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:total",
+      "entryType": "measure",
+      "startTime": 16909.823417067528,
+      "duration": 112.82095801830292,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse",
+      "entryType": "measure",
+      "startTime": 16909.881749987602,
+      "duration": 98.66000008583069,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:handleEvent",
+      "entryType": "measure",
+      "startTime": 16910.67745900154,
+      "duration": 48.81387507915497,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Meta:finalize",
+      "entryType": "measure",
+      "startTime": 16959.51862502098,
+      "duration": 1.6286669969558716,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:AnimationFrames:finalize",
+      "entryType": "measure",
+      "startTime": 16961.360334038734,
+      "duration": 1.4952080249786377,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Animations:finalize",
+      "entryType": "measure",
+      "startTime": 16962.871584057808,
+      "duration": 1.4068750143051147,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Samples:finalize",
+      "entryType": "measure",
+      "startTime": 16964.292209029198,
+      "duration": 1.2440409660339355,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:AuctionWorklets:finalize",
+      "entryType": "measure",
+      "startTime": 16965.547000050545,
+      "duration": 1.209291934967041,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:NetworkRequests:finalize",
+      "entryType": "measure",
+      "startTime": 16966.766084074974,
+      "duration": 2.0435829162597656,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Renderer:finalize",
+      "entryType": "measure",
+      "startTime": 16968.82562506199,
+      "duration": 2.902541995048523,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Flows:finalize",
+      "entryType": "measure",
+      "startTime": 16971.742166996002,
+      "duration": 2.0731250047683716,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:AsyncJSCalls:finalize",
+      "entryType": "measure",
+      "startTime": 16973.83137500286,
+      "duration": 1.3255000114440918,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:DOMStats:finalize",
+      "entryType": "measure",
+      "startTime": 16975.167584061623,
+      "duration": 1.1812909841537476,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:UserTimings:finalize",
+      "entryType": "measure",
+      "startTime": 16976.36262500286,
+      "duration": 1.1899170875549316,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:ExtensionTraceData:finalize",
+      "entryType": "measure",
+      "startTime": 16977.562667012215,
+      "duration": 1.374250054359436,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:LayerTree:finalize",
+      "entryType": "measure",
+      "startTime": 16978.95141708851,
+      "duration": 1.4986670017242432,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Frames:finalize",
+      "entryType": "measure",
+      "startTime": 16980.462750077248,
+      "duration": 6.25658392906189,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:GPU:finalize",
+      "entryType": "measure",
+      "startTime": 16986.746084094048,
+      "duration": 0.11004090309143066,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:ImagePainting:finalize",
+      "entryType": "measure",
+      "startTime": 16986.86495900154,
+      "duration": 1.2065410614013672,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Initiators:finalize",
+      "entryType": "measure",
+      "startTime": 16988.086584091187,
+      "duration": 1.3564999103546143,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Invalidations:finalize",
+      "entryType": "measure",
+      "startTime": 16989.46500003338,
+      "duration": 1.1901249885559082,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:PageLoadMetrics:finalize",
+      "entryType": "measure",
+      "startTime": 16990.664250016212,
+      "duration": 1.8082090616226196,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:LargestImagePaint:finalize",
+      "entryType": "measure",
+      "startTime": 16992.49120903015,
+      "duration": 1.3732080459594727,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:LargestTextPaint:finalize",
+      "entryType": "measure",
+      "startTime": 16993.87275004387,
+      "duration": 1.239542007446289,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Screenshots:finalize",
+      "entryType": "measure",
+      "startTime": 16995.135833978653,
+      "duration": 2.691333055496216,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:LayoutShifts:finalize",
+      "entryType": "measure",
+      "startTime": 16997.838708996773,
+      "duration": 1.4813330173492432,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Memory:finalize",
+      "entryType": "measure",
+      "startTime": 16999.339625000954,
+      "duration": 1.1761670112609863,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:PageFrames:finalize",
+      "entryType": "measure",
+      "startTime": 17000.52195906639,
+      "duration": 1.1747080087661743,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Scripts:finalize",
+      "entryType": "measure",
+      "startTime": 17001.702542066574,
+      "duration": 1.303375005722046,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:SelectorStats:finalize",
+      "entryType": "measure",
+      "startTime": 17003.016250014305,
+      "duration": 1.1883339881896973,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:UserInteractions:finalize",
+      "entryType": "measure",
+      "startTime": 17004.212709069252,
+      "duration": 1.319916009902954,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Workers:finalize",
+      "entryType": "measure",
+      "startTime": 17005.539916992188,
+      "duration": 1.1966670751571655,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:Warnings:finalize",
+      "entryType": "measure",
+      "startTime": 17006.743000030518,
+      "duration": 1.2245420217514038,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:parse:clone",
+      "entryType": "measure",
+      "startTime": 17007.974125027657,
+      "duration": 0.5531669855117798,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights",
+      "entryType": "measure",
+      "startTime": 17008.54466700554,
+      "duration": 14.09641706943512,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:createLanternContext",
+      "entryType": "measure",
+      "startTime": 17008.689417004585,
+      "duration": 7.29783308506012,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:CLSCulprits",
+      "entryType": "measure",
+      "startTime": 17016.089125037193,
+      "duration": 0.28458404541015625,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:Cache",
+      "entryType": "measure",
+      "startTime": 17016.382709026337,
+      "duration": 0.1444159746170044,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:DOMSize",
+      "entryType": "measure",
+      "startTime": 17016.5333340168,
+      "duration": 0.1579580307006836,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:DocumentLatency",
+      "entryType": "measure",
+      "startTime": 17016.696375012398,
+      "duration": 0.23966705799102783,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:DuplicatedJavaScript",
+      "entryType": "measure",
+      "startTime": 17016.941125035286,
+      "duration": 0.9041249752044678,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:FontDisplay",
+      "entryType": "measure",
+      "startTime": 17017.852167010307,
+      "duration": 0.0947500467300415,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:ForcedReflow",
+      "entryType": "measure",
+      "startTime": 17017.95191705227,
+      "duration": 0.11150002479553223,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:ImageDelivery",
+      "entryType": "measure",
+      "startTime": 17018.06783401966,
+      "duration": 0.15416598320007324,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:InteractionToNextPaint",
+      "entryType": "measure",
+      "startTime": 17018.227584004402,
+      "duration": 0.05662500858306885,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:LCPDiscovery",
+      "entryType": "measure",
+      "startTime": 17018.288625001907,
+      "duration": 0.11204206943511963,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:LCPPhases",
+      "entryType": "measure",
+      "startTime": 17018.40575003624,
+      "duration": 0.14408397674560547,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:LegacyJavaScript",
+      "entryType": "measure",
+      "startTime": 17018.554167032242,
+      "duration": 0.10441696643829346,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:ModernHTTP",
+      "entryType": "measure",
+      "startTime": 17018.6627920866,
+      "duration": 1.2734169960021973,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:NetworkDependencyTree",
+      "entryType": "measure",
+      "startTime": 17019.943667054176,
+      "duration": 0.4162919521331787,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:RenderBlocking",
+      "entryType": "measure",
+      "startTime": 17020.36595904827,
+      "duration": 0.13587498664855957,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:SlowCSSSelector",
+      "entryType": "measure",
+      "startTime": 17020.50679206848,
+      "duration": 0.09545791149139404,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:ThirdParties",
+      "entryType": "measure",
+      "startTime": 17020.606500029564,
+      "duration": 1.55287504196167,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:TraceEngineResult:insights:Viewport",
+      "entryType": "measure",
+      "startTime": 17022.168583989143,
+      "duration": 0.09183299541473389,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:ProcessedNavigation",
+      "entryType": "measure",
+      "startTime": 17024.944375038147,
+      "duration": 0.27674996852874756,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:CumulativeLayoutShift",
+      "entryType": "measure",
+      "startTime": 17025.261000037193,
+      "duration": 8.508792042732239,
+      "detail": null
+    },
+    {
+      "name": "lh:computed:Responsiveness",
+      "entryType": "measure",
+      "startTime": 17034.00133407116,
+      "duration": 0.05241596698760986,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:ViewportDimensions",
+      "entryType": "measure",
+      "startTime": 17038.87633407116,
+      "duration": 0.5640829801559448,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:FullPageScreenshot",
+      "entryType": "measure",
+      "startTime": 17039.44991707802,
+      "duration": 1084.7214579582214,
+      "detail": null
+    },
+    {
+      "name": "lh:gather:getArtifact:BFCacheFailures",
+      "entryType": "measure",
+      "startTime": 18124.2058750391,
+      "duration": 421.45908403396606,
+      "detail": null
+    }
+  ],
+  "LighthouseRunWarnings": [],
+  "settings": {
+    "output": [
+      "json",
+      "html"
+    ],
+    "maxWaitForFcp": 30000,
+    "maxWaitForLoad": 45000,
+    "pauseAfterFcpMs": 5250,
+    "pauseAfterLoadMs": 5250,
+    "networkQuietThresholdMs": 5250,
+    "cpuQuietThresholdMs": 5250,
+    "formFactor": "desktop",
+    "throttling": {
+      "rttMs": 150,
+      "throughputKbps": 1638.4,
+      "requestLatencyMs": 562.5,
+      "downloadThroughputKbps": 1474.5600000000002,
+      "uploadThroughputKbps": 675,
+      "cpuSlowdownMultiplier": 4
+    },
+    "throttlingMethod": "provided",
+    "screenEmulation": {
+      "mobile": true,
+      "width": 412,
+      "height": 823,
+      "deviceScaleFactor": 1.75,
+      "disabled": true
+    },
+    "emulatedUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+    "auditMode": false,
+    "gatherMode": true,
+    "clearStorageTypes": [
+      "file_systems",
+      "shader_cache",
+      "service_workers",
+      "cache_storage"
+    ],
+    "disableStorageReset": false,
+    "debugNavigation": false,
+    "channel": "node",
+    "usePassiveGathering": false,
+    "disableFullPageScreenshot": false,
+    "skipAboutBlank": false,
+    "blankPage": "about:blank",
+    "ignoreStatusCode": false,
+    "locale": "en-US",
+    "blockedUrlPatterns": null,
+    "additionalTraceCategories": null,
+    "extraHeaders": null,
+    "precomputedLanternData": null,
+    "onlyAudits": null,
+    "onlyCategories": [
+      "performance",
+      "accessibility",
+      "best-practices",
+      "seo",
+      "pwa"
+    ],
+    "skipAudits": null,
+    "disableNetworkThrottling": true,
+    "disableCpuThrottling": true
+  },
+  "BenchmarkIndex": 3171,
+  "HostUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/137.0.0.0 Safari/537.36",
+  "HostFormFactor": "desktop",
+  "HostProduct": "Chrome/137.0.7151.120",
+  "URL": {
+    "requestedUrl": "https://example.com/",
+    "mainDocumentUrl": "https://example.com/",
+    "finalDisplayedUrl": "https://example.com/"
+  },
+  "PageLoadError": null,
+  "GatherContext": {
+    "gatherMode": "navigation"
+  },
+  "Accessibility": {
+    "violations": [
+      {
+        "id": "html-has-lang",
+        "impact": "serious",
+        "tags": [
+          "cat.language",
+          "wcag2a",
+          "wcag311",
+          "TTv5",
+          "TT11.a",
+          "EN-301-549",
+          "EN-9.3.1.1",
+          "ACT"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "html"
+            ],
+            "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute",
+            "node": {
+              "lhId": "1-0-HTML",
+              "devtoolsNodePath": "1,HTML",
+              "selector": "html",
+              "boundingRect": {
+                "top": 0,
+                "bottom": 394,
+                "left": 0,
+                "right": 1200,
+                "width": 1200,
+                "height": 394
+              },
+              "snippet": "<html>",
+              "nodeLabel": "html"
+            },
+            "relatedNodes": []
+          }
+        ]
+      },
+      {
+        "id": "landmark-one-main",
+        "impact": "moderate",
+        "tags": [
+          "cat.semantics",
+          "best-practice"
+        ],
+        "nodes": [
+          {
+            "target": [
+              "html"
+            ],
+            "failureSummary": "Fix all of the following:\n  Document does not have a main landmark",
+            "node": {
+              "lhId": "1-0-HTML",
+              "devtoolsNodePath": "1,HTML",
+              "selector": "html",
+              "boundingRect": {
+                "top": 0,
+                "bottom": 394,
+                "left": 0,
+                "right": 1200,
+                "width": 1200,
+                "height": 394
+              },
+              "snippet": "<html>",
+              "nodeLabel": "html"
+            },
+            "relatedNodes": []
+          }
+        ]
+      }
+    ],
+    "incomplete": [],
+    "notApplicable": [
+      {
+        "id": "accesskeys"
+      },
+      {
+        "id": "aria-allowed-attr"
+      },
+      {
+        "id": "aria-allowed-role"
+      },
+      {
+        "id": "aria-command-name"
+      },
+      {
+        "id": "aria-conditional-attr"
+      },
+      {
+        "id": "aria-deprecated-role"
+      },
+      {
+        "id": "aria-dialog-name"
+      },
+      {
+        "id": "aria-hidden-focus"
+      },
+      {
+        "id": "aria-input-field-name"
+      },
+      {
+        "id": "aria-meter-name"
+      },
+      {
+        "id": "aria-progressbar-name"
+      },
+      {
+        "id": "aria-prohibited-attr"
+      },
+      {
+        "id": "aria-required-attr"
+      },
+      {
+        "id": "aria-required-children"
+      },
+      {
+        "id": "aria-required-parent"
+      },
+      {
+        "id": "aria-roles"
+      },
+      {
+        "id": "aria-text"
+      },
+      {
+        "id": "aria-toggle-field-name"
+      },
+      {
+        "id": "aria-tooltip-name"
+      },
+      {
+        "id": "aria-treeitem-name"
+      },
+      {
+        "id": "aria-valid-attr-value"
+      },
+      {
+        "id": "aria-valid-attr"
+      },
+      {
+        "id": "button-name"
+      },
+      {
+        "id": "definition-list"
+      },
+      {
+        "id": "dlitem"
+      },
+      {
+        "id": "duplicate-id-aria"
+      },
+      {
+        "id": "form-field-multiple-labels"
+      },
+      {
+        "id": "frame-title"
+      },
+      {
+        "id": "html-lang-valid"
+      },
+      {
+        "id": "html-xml-lang-mismatch"
+      },
+      {
+        "id": "image-alt"
+      },
+      {
+        "id": "image-redundant-alt"
+      },
+      {
+        "id": "input-button-name"
+      },
+      {
+        "id": "input-image-alt"
+      },
+      {
+        "id": "label-content-name-mismatch"
+      },
+      {
+        "id": "label"
+      },
+      {
+        "id": "link-in-text-block"
+      },
+      {
+        "id": "list"
+      },
+      {
+        "id": "listitem"
+      },
+      {
+        "id": "meta-refresh"
+      },
+      {
+        "id": "object-alt"
+      },
+      {
+        "id": "select-name"
+      },
+      {
+        "id": "skip-link"
+      },
+      {
+        "id": "tabindex"
+      },
+      {
+        "id": "table-duplicate-name"
+      },
+      {
+        "id": "table-fake-caption"
+      },
+      {
+        "id": "td-has-header"
+      },
+      {
+        "id": "td-headers-attr"
+      },
+      {
+        "id": "th-has-data-cells"
+      },
+      {
+        "id": "valid-lang"
+      },
+      {
+        "id": "video-caption"
+      }
+    ],
+    "passes": [
+      {
+        "id": "aria-hidden-body"
+      },
+      {
+        "id": "bypass"
+      },
+      {
+        "id": "color-contrast"
+      },
+      {
+        "id": "document-title"
+      },
+      {
+        "id": "empty-heading"
+      },
+      {
+        "id": "heading-order"
+      },
+      {
+        "id": "identical-links-same-purpose"
+      },
+      {
+        "id": "link-name"
+      },
+      {
+        "id": "meta-viewport"
+      },
+      {
+        "id": "target-size"
+      }
+    ],
+    "version": "4.10.3"
+  },
+  "AnchorElements": [
+    {
+      "href": "https://www.iana.org/domains/example",
+      "rawHref": "https://www.iana.org/domains/example",
+      "onclick": "",
+      "role": "",
+      "name": "",
+      "text": "More information...",
+      "rel": "",
+      "target": "",
+      "id": "",
+      "node": {
+        "lhId": "1-1-A",
+        "devtoolsNodePath": "1,HTML,1,BODY,0,DIV,2,P,0,A",
+        "selector": "body > div > p > a",
+        "boundingRect": {
+          "top": 247,
+          "bottom": 266,
+          "left": 300,
+          "right": 437,
+          "width": 137,
+          "height": 19
+        },
+        "snippet": "<a href=\"https://www.iana.org/domains/example\">",
+        "nodeLabel": "More information..."
+      },
+      "listeners": []
+    }
+  ],
+  "ConsoleMessages": [
+    {
+      "eventType": "protocolLog",
+      "source": "network",
+      "level": "error",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "timestamp": 1750717151596.747,
+      "url": "https://example.com/favicon.ico"
+    }
+  ],
+  "CSSUsage": [
+    {
+      "styleSheetId": "style-sheet-1944-1",
+      "startOffset": 5,
+      "endOffset": 240,
+      "used": true
+    },
+    {
+      "styleSheetId": "style-sheet-1944-1",
+      "startOffset": 245,
+      "endOffset": 445,
+      "used": true
+    },
+    {
+      "styleSheetId": "style-sheet-1944-1",
+      "startOffset": 450,
+      "endOffset": 530,
+      "used": true
+    }
+  ],
+  "Doctype": {
+    "name": "html",
+    "publicId": "",
+    "systemId": "",
+    "documentCompatMode": "CSS1Compat"
+  },
+  "DOMStats": {
+    "depth": {
+      "max": 4,
+      "lhId": "1-1-A",
+      "devtoolsNodePath": "1,HTML,1,BODY,0,DIV,2,P,0,A",
+      "selector": "body > div > p > a",
+      "boundingRect": {
+        "top": 247,
+        "bottom": 266,
+        "left": 300,
+        "right": 437,
+        "width": 137,
+        "height": 19
+      },
+      "snippet": "<a href=\"https://www.iana.org/domains/example\">",
+      "nodeLabel": "More information..."
+    },
+    "width": {
+      "max": 3,
+      "lhId": "1-2-DIV",
+      "devtoolsNodePath": "1,HTML,1,BODY,0,DIV",
+      "selector": "body > div",
+      "boundingRect": {
+        "top": 80,
+        "bottom": 314,
+        "left": 268,
+        "right": 932,
+        "width": 664,
+        "height": 234
+      },
+      "snippet": "<div>",
+      "nodeLabel": "Example Domain\n\nThis domain is for use in illustrative examples in documents. Y…"
+    },
+    "totalBodyElements": 5
+  },
+  "FontSize": {
+    "analyzedFailingNodesData": [],
+    "analyzedFailingTextLength": 0,
+    "failingTextLength": 0,
+    "totalTextLength": 345
+  },
+  "Inputs": {
+    "inputs": [],
+    "forms": [],
+    "labels": []
+  },
+  "ImageElements": [],
+  "InspectorIssues": {
+    "attributionReportingIssue": [],
+    "blockedByResponseIssue": [],
+    "bounceTrackingIssue": [],
+    "clientHintIssue": [],
+    "contentSecurityPolicyIssue": [],
+    "cookieDeprecationMetadataIssue": [],
+    "corsIssue": [],
+    "deprecationIssue": [],
+    "federatedAuthRequestIssue": [],
+    "genericIssue": [],
+    "heavyAdIssue": [],
+    "lowTextContrastIssue": [],
+    "mixedContentIssue": [],
+    "navigatorUserAgentIssue": [],
+    "partitioningBlobURLIssue": [],
+    "propertyRuleIssue": [],
+    "quirksModeIssue": [],
+    "cookieIssue": [],
+    "selectElementAccessibilityIssue": [],
+    "sharedArrayBufferIssue": [],
+    "sharedDictionaryIssue": [],
+    "stylesheetLoadingIssue": [],
+    "sriMessageSignatureIssue": [],
+    "federatedAuthUserInfoRequestIssue": [],
+    "userReidentificationIssue": []
+  },
+  "JsUsage": {
+    "9": {
+      "scriptId": "9",
+      "url": "pptr:internal",
+      "functions": [
+        {
+          "functionName": "",
+          "ranges": [
+            {
+              "startOffset": 0,
+              "endOffset": 27,
+              "count": 1
+            }
+          ],
+          "isBlockCoverage": false
+        }
+      ]
+    }
+  },
+  "LinkElements": [],
+  "MainDocumentContent": "<!doctype html>\n<html>\n<head>\n    <title>Example Domain</title>\n\n    <meta charset=\"utf-8\" />\n    <meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <style type=\"text/css\">\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    </style>    \n</head>\n\n<body>\n<div>\n    <h1>Example Domain</h1>\n    <p>This domain is for use in illustrative examples in documents. You may use this\n    domain in literature without prior coordination or asking for permission.</p>\n    <p><a href=\"https://www.iana.org/domains/example\">More information...</a></p>\n</div>\n</body>\n</html>\n",
+  "MetaElements": [
+    {
+      "name": "",
+      "content": "",
+      "charset": "utf-8",
+      "node": {
+        "lhId": "1-3-META",
+        "devtoolsNodePath": "1,HTML,0,HEAD,1,META",
+        "selector": "head > meta",
+        "boundingRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "snippet": "<meta charset=\"utf-8\">",
+        "nodeLabel": "head > meta"
+      }
+    },
+    {
+      "name": "",
+      "content": "text/html; charset=utf-8",
+      "httpEquiv": "content-type",
+      "node": {
+        "lhId": "1-4-META",
+        "devtoolsNodePath": "1,HTML,0,HEAD,2,META",
+        "selector": "head > meta",
+        "boundingRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "snippet": "<meta http-equiv=\"Content-type\" content=\"text/html; charset=utf-8\">",
+        "nodeLabel": "head > meta"
+      }
+    },
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1",
+      "node": {
+        "lhId": "1-5-META",
+        "devtoolsNodePath": "1,HTML,0,HEAD,3,META",
+        "selector": "head > meta",
+        "boundingRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "snippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+        "nodeLabel": "head > meta"
+      }
+    }
+  ],
+  "NetworkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+  "OptimizedImages": [],
+  "ResponseCompression": [],
+  "RobotsTxt": {
+    "status": null,
+    "content": null,
+    "errorMessage": "Timed out fetching resource"
+  },
+  "Scripts": [],
+  "SourceMaps": [],
+  "Stacks": [],
+  "Stylesheets": [
+    {
+      "header": {
+        "styleSheetId": "style-sheet-1944-1",
+        "frameId": "D248183A54A986D47C8029787B628EC9",
+        "sourceURL": "https://example.com/",
+        "origin": "regular",
+        "title": "",
+        "ownerNode": 17,
+        "disabled": false,
+        "isInline": true,
+        "isMutable": false,
+        "isConstructed": false,
+        "startLine": 8,
+        "startColumn": 27,
+        "length": 650,
+        "endLine": 34,
+        "endColumn": 4
+      },
+      "content": "\n    body {\n        background-color: #f0f0f2;\n        margin: 0;\n        padding: 0;\n        font-family: -apple-system, system-ui, BlinkMacSystemFont, \"Segoe UI\", \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n        \n    }\n    div {\n        width: 600px;\n        margin: 5em auto;\n        padding: 2em;\n        background-color: #fdfdff;\n        border-radius: 0.5em;\n        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);\n    }\n    a:link, a:visited {\n        color: #38488f;\n        text-decoration: none;\n    }\n    @media (max-width: 700px) {\n        div {\n            margin: 0 auto;\n            width: auto;\n        }\n    }\n    "
+    }
+  ],
+  "TraceElements": [
+    {
+      "node": {
+        "lhId": "page-0-P",
+        "devtoolsNodePath": "1,HTML,1,BODY,0,DIV,1,P",
+        "selector": "body > div > p",
+        "boundingRect": {
+          "top": 193,
+          "bottom": 231,
+          "left": 300,
+          "right": 900,
+          "width": 600,
+          "height": 38
+        },
+        "snippet": "<p>",
+        "nodeLabel": "This domain is for use in illustrative examples in documents. You may use this …"
+      },
+      "traceEventType": "trace-engine",
+      "nodeId": 8
+    },
+    {
+      "node": {
+        "lhId": "page-1-META",
+        "devtoolsNodePath": "1,HTML,0,HEAD,3,META",
+        "selector": "head > meta",
+        "boundingRect": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0,
+          "width": 0,
+          "height": 0
+        },
+        "snippet": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+        "nodeLabel": "head > meta"
+      },
+      "traceEventType": "trace-engine",
+      "nodeId": 3
+    },
+    {
+      "node": {
+        "lhId": "page-2-DIV",
+        "devtoolsNodePath": "1,HTML,1,BODY,0,DIV",
+        "selector": "body > div",
+        "boundingRect": {
+          "top": 80,
+          "bottom": 314,
+          "left": 268,
+          "right": 932,
+          "width": 664,
+          "height": 234
+        },
+        "snippet": "<div>",
+        "nodeLabel": "Example Domain\n\nThis domain is for use in illustrative examples in documents. Y…"
+      },
+      "traceEventType": "trace-engine",
+      "nodeId": 5
+    },
+    {
+      "node": {
+        "lhId": "page-3-A",
+        "devtoolsNodePath": "1,HTML,1,BODY,0,DIV,2,P,0,A",
+        "selector": "body > div > p > a",
+        "boundingRect": {
+          "top": 247,
+          "bottom": 266,
+          "left": 300,
+          "right": 437,
+          "width": 137,
+          "height": 19
+        },
+        "snippet": "<a href=\"https://www.iana.org/domains/example\">",
+        "nodeLabel": "More information..."
+      },
+      "traceEventType": "trace-engine",
+      "nodeId": 6
+    },
+    {
+      "node": {
+        "lhId": "page-0-P",
+        "devtoolsNodePath": "1,HTML,1,BODY,0,DIV,1,P",
+        "selector": "body > div > p",
+        "boundingRect": {
+          "top": 193,
+          "bottom": 231,
+          "left": 300,
+          "right": 900,
+          "width": 600,
+          "height": 38
+        },
+        "snippet": "<p>",
+        "nodeLabel": "This domain is for use in illustrative examples in documents. You may use this …"
+      },
+      "traceEventType": "largest-contentful-paint",
+      "nodeId": 8,
+      "type": "text"
+    }
+  ],
+  "ViewportDimensions": {
+    "innerWidth": 1200,
+    "innerHeight": 813,
+    "outerWidth": 1200,
+    "outerHeight": 900,
+    "devicePixelRatio": 2
+  },
+  "FullPageScreenshot": {
+    "screenshot": {
+      "data": "data:image/webp;base64,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YVIGI1ce3QktbyKe8741oLvj0YE1WfgaBU4Qa6PYs6dOnnjzp06dQMznhmkCoPIKj7ZQvo3SIs4aeUadhQhEmvXRUaccE4BtdJC4OnbmdZFhAgQk6tWrVq1atWru8g10excEkAQyHLsgLAny1AOpwIGwUOp3rIDJKHpM5ZvWgHRuE4EcTrHh4gCWdOnTp06dOnTp06dg9Q4cOHDhw4cexC7nVq23wuu5nlxs4cOHDhw4cOHDhw4cR9R7FnTp06dOq05AyriBU4SRHjPINdHsWdOnTp06dOnTqB31Dhw4cOHDh8qolatWm5VUWe92GWxlsZbGfJqVNIhyIciHIhyIciHIhyIciHIhyIciHIhyIciHIhyIciHIhyIciHIhyIciHIhyIciHIhyIciHIhyIcqZM/E96BAgQIECBAgmN9Q4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHD5VRK1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWru8g10exZ06dOnTp06dOnTp06dOnTp06dOnTp06dOnTp1WnIGVcQIECBAgQIECBAgQIECBAgQIECBAgQIECBAgQIEhWUOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw4cOHDhw49iF3OrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrVq1+VatWrVq1atWrVq1atWrVq1atWrVq1atWrVq1atWrTQAP7/tFoAC9CgAAAAAAAACtno7D+4AHAYvbAAdcUAABGoNis2jiiuZ+3l8O1B7B5AooPv+vH/Nf+RUnF1DXVVqE7j3u142rAu/oKTZXXjOWkoU19pYEE4YCHbK1ExsLCX3dxe1CkKuoz1hSwHFS5/VlVgOyNHjxQH0Ceb3mVzMpvz6qVR0DnXYfx1d/ZlZXC6ybQyK0WaeAbb1LFtqJTNibslpxsLjAouppQID1ec5d1x/InJAu4FSUUnBMT5XDBI0tvsAQDH1xPPq/BnEyCqg6TyP+013IVxXJauz9K0AOB4fQqvR8ApVBR24eugUJgUu8Vg5mbhGSB5Bgp93Nu6IYmrfCyIhQhT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",
+      "width": 1200,
+      "height": 900
+    },
+    "nodes": {
+      "page-0-P": {
+        "id": "",
+        "top": 193,
+        "bottom": 231,
+        "left": 300,
+        "right": 900,
+        "width": 600,
+        "height": 38
+      },
+      "page-1-META": {
+        "id": "",
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "page-2-DIV": {
+        "id": "",
+        "top": 80,
+        "bottom": 314,
+        "left": 268,
+        "right": 932,
+        "width": 664,
+        "height": 234
+      },
+      "page-3-A": {
+        "id": "",
+        "top": 247,
+        "bottom": 266,
+        "left": 300,
+        "right": 437,
+        "width": 137,
+        "height": 19
+      },
+      "1-0-HTML": {
+        "id": "",
+        "top": 0,
+        "bottom": 394,
+        "left": 0,
+        "right": 1200,
+        "width": 1200,
+        "height": 394
+      },
+      "1-1-A": {
+        "id": "",
+        "top": 247,
+        "bottom": 266,
+        "left": 300,
+        "right": 437,
+        "width": 137,
+        "height": 19
+      },
+      "1-2-DIV": {
+        "id": "",
+        "top": 80,
+        "bottom": 314,
+        "left": 268,
+        "right": 932,
+        "width": 664,
+        "height": 234
+      },
+      "1-3-META": {
+        "id": "",
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "1-4-META": {
+        "id": "",
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      },
+      "1-5-META": {
+        "id": "",
+        "top": 0,
+        "bottom": 0,
+        "left": 0,
+        "right": 0,
+        "width": 0,
+        "height": 0
+      }
+    }
+  },
+  "BFCacheFailures": []
+}

@@ -23,6 +23,8 @@ class Lighthouse
 
     protected ?array $onlyAudits = null;
 
+    protected bool $harRequested = false;
+
     public static function url(string $url): self
     {
         return new self($url);
@@ -200,9 +202,11 @@ class Lighthouse
         return $this;
     }
 
-    public function saveHar(bool $saveHar = true): self
+    public function saveHar(): self
     {
-        Arr::set($this->lighthouseConfig, 'settings.gatherMode', $saveHar);
+        // DevtoolsLog (used for HAR) is collected by default in Lighthouse
+        // No special configuration needed - just track that HAR was requested
+        $this->harRequested = true;
 
         return $this;
     }

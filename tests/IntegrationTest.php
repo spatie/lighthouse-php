@@ -3,6 +3,7 @@
 use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Lighthouse;
 use Spatie\Lighthouse\Support\Arr;
+use Spatie\TemporaryDirectory\TemporaryDirectory;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 
 it('can get the scores of a real site', function () {
@@ -21,3 +22,17 @@ it('will throw an exception when the process times out', function () {
         ->timeoutInSeconds(1)
         ->run();
 })->throws(ProcessTimedOutException::class);
+
+it('can get the dev tools log', function () {
+    $result = Lighthouse::url('https://example.com')->run();
+
+    $rawHarData = $result->devToolsLog();
+    expect($rawHarData)->not->toBeNull()
+        ->and($rawHarData)->toBeArray()
+        ->and($rawHarData)->not->toBeEmpty();
+
+    $firstEntry = $rawHarData[0];
+
+    expect($firstEntry)->toHaveKey('method')
+        ->and($firstEntry)->toHaveKey('params');
+});
