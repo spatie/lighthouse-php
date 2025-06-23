@@ -2,7 +2,6 @@
 
 namespace Spatie\Lighthouse;
 
-use Exception;
 use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Enums\FormFactor;
 use Spatie\Lighthouse\Exceptions\AuditDoesNotExist;

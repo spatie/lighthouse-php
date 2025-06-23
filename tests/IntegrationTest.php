@@ -3,7 +3,6 @@
 use Spatie\Lighthouse\Enums\Category;
 use Spatie\Lighthouse\Lighthouse;
 use Spatie\Lighthouse\Support\Arr;
-use Spatie\TemporaryDirectory\TemporaryDirectory;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
 
 it('can get the scores of a real site', function () {
