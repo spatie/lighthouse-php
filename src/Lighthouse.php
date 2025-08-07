@@ -49,6 +49,7 @@ class Lighthouse
                 'onlyCategories' => Category::values(),
                 'formFactor' => 'desktop',
                 'output' => ['json', 'html'],
+                'gatherMode' => false,
                 'disableNetworkThrottling' => true,
                 'disableCpuThrottling' => true,
                 'throttlingMethod' => 'provided',
@@ -211,7 +212,7 @@ class Lighthouse
         $arguments = $this->lighthouseScriptArguments();
 
         $command = [
-            (new ExecutableFinder())->find('node', 'node', [
+            (new ExecutableFinder)->find('node', 'node', [
                 '/usr/local/bin',
                 '/opt/homebrew/bin',
             ]),

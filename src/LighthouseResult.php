@@ -9,9 +9,7 @@ use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {
-    public function __construct(protected array $rawResults = [])
-    {
-    }
+    public function __construct(protected array $rawResults = []) {}
 
     public function setJsonReport(array $jsonReport): self
     {
@@ -104,6 +102,11 @@ class LighthouseResult
         file_put_contents($path, $this->html());
 
         return $this;
+    }
+
+    public function devToolsLog(): ?array
+    {
+        return $this->rawResults['artifacts']['DevtoolsLog'] ?? null;
     }
 
     public function rawResults(?string $key = null): mixed

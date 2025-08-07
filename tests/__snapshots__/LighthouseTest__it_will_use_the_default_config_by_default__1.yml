@@ -3,5 +3,5 @@ chromeOptions:
     chromeFlags: ['--headless']
 lighthouseConfig:
     extends: 'lighthouse:default'
-    settings: { onlyCategories: [performance, accessibility, best-practices, seo, pwa], formFactor: desktop, output: [json, html], disableNetworkThrottling: true, disableCpuThrottling: true, throttlingMethod: provided, screenEmulation: { disabled: true } }
+    settings: { onlyCategories: [performance, accessibility, best-practices, seo, pwa], formFactor: desktop, output: [json, html], gatherMode: false, disableNetworkThrottling: true, disableCpuThrottling: true, throttlingMethod: provided, screenEmulation: { disabled: true } }
 timeout: 59300
