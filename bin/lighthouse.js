@@ -12,6 +12,11 @@
 
     const lighthouseConfig = arguments[2];
     const timeoutInMs = arguments[3];
+    const maxWaitForLoad = arguments[4];
+
+    if (maxWaitForLoad !== null && maxWaitForLoad !== undefined) {
+        lighthouseOptions.maxWaitForLoad = maxWaitForLoad;
+    }
 
     const killTimer = setTimeout(() => chrome.kill(), timeoutInMs);
 
