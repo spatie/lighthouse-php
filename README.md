@@ -47,6 +47,7 @@ Lighthouse::url('https://example.com')
     ->headers(['MyExtraHeader' => 'HeaderValue'])
     ->categories(Category::Performance, Category::Accessibility)
     ->throttleCpu()
+    ->maxWaitForLoad(5000) // Wait max 5 seconds for page load
     ->run();
 ```
 

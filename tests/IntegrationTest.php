@@ -21,3 +21,18 @@ it('will throw an exception when the process times out', function () {
         ->timeoutInSeconds(1)
         ->run();
 })->throws(ProcessTimedOutException::class);
+
+it('can set maxWaitForLoad and complete within expected time', function () {
+    $startTime = microtime(true);
+
+    $result = Lighthouse::url('https://example.com')
+        ->maxWaitForLoad(1000) // 1 second max wait for load
+        ->timeoutInSeconds(15) // Overall timeout higher than maxWaitForLoad
+        ->run();
+
+    $endTime = microtime(true);
+    $executionTime = $endTime - $startTime;
+
+    expect($result->scores())->toBeArray();
+    expect($executionTime)->toBeLessThan(15);
+});

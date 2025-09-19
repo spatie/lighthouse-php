@@ -213,3 +213,23 @@ it('can accept budgets', function () {
 
     expect($this->lighthouse->lighthouseScriptArguments('lighthouseConfig.settings.budgets'))->toEqual($budgets);
 });
+
+
+it('passes maxWaitForLoad to lighthouse script arguments', function () {
+    $lighthouse = Lighthouse::url('https://example.com')
+        ->maxWaitForLoad(5000);
+
+    $arguments = $lighthouse->lighthouseScriptArguments();
+
+    expect($arguments)->toHaveKey('maxWaitForLoad');
+    expect($arguments['maxWaitForLoad'])->toBe(5000);
+});
+
+it('does not include maxWaitForLoad when not set', function () {
+    $lighthouse = Lighthouse::url('https://example.com');
+
+    $arguments = $lighthouse->lighthouseScriptArguments();
+
+    expect($arguments)->toHaveKey('maxWaitForLoad');
+    expect($arguments['maxWaitForLoad'])->toBeNull();
+});

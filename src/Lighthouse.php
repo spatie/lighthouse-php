@@ -21,6 +21,8 @@ class Lighthouse
 
     protected int $timeoutInSeconds = 60;
 
+    protected ?int $maxWaitForLoadInMs = null;
+
     protected ?array $onlyAudits = null;
 
     public static function url(string $url): self
@@ -206,6 +208,13 @@ class Lighthouse
         return $this;
     }
 
+    public function maxWaitForLoad(int $maxWaitInMs): self
+    {
+        $this->maxWaitForLoadInMs = $maxWaitInMs;
+
+        return $this;
+    }
+
     public function run(): LighthouseResult
     {
         $arguments = $this->lighthouseScriptArguments();
@@ -252,6 +261,7 @@ class Lighthouse
             'chromeOptions' => $this->chromeOptions,
             'lighthouseConfig' => $this->lighthouseConfig,
             'timeout' => ($this->timeoutInSeconds * 1000) - 700,
+            'maxWaitForLoad' => $this->maxWaitForLoadInMs,
         ], $key);
     }
 }
