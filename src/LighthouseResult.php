@@ -9,9 +9,7 @@ use Spatie\Lighthouse\Support\Arr;
 
 class LighthouseResult
 {
-    public function __construct(protected array $rawResults = [])
-    {
-    }
+    public function __construct(protected array $rawResults = []) {}
 
     public function setJsonReport(array $jsonReport): self
     {

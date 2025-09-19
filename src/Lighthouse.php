@@ -220,7 +220,7 @@ class Lighthouse
         $arguments = $this->lighthouseScriptArguments();
 
         $command = [
-            (new ExecutableFinder())->find('node', 'node', [
+            (new ExecutableFinder)->find('node', 'node', [
                 '/usr/local/bin',
                 '/opt/homebrew/bin',
             ]),
