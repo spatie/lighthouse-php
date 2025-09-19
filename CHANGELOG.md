@@ -2,6 +2,27 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.3.0 - 2025-09-19
+
+### What's Changed
+
+* Bump dependabot/fetch-metadata from 2.1.0 to 2.2.0 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/48
+* Bump dependabot/fetch-metadata from 2.2.0 to 2.3.0 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/52
+* Bump aglipanci/laravel-pint-action from 2.4 to 2.5 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/53
+* Bump dependabot/fetch-metadata from 2.3.0 to 2.4.0 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/55
+* Bump stefanzweifel/git-auto-commit-action from 5 to 6 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/56
+* Bump aglipanci/laravel-pint-action from 2.5 to 2.6 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/59
+* Update issue template by @AlexVanderbist in https://github.com/spatie/lighthouse-php/pull/61
+* Bump actions/checkout from 3 to 5 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/60
+* Implement an optional maxWaitForLoad() to avoid waiting too long by @mattiasgeniar in https://github.com/spatie/lighthouse-php/pull/62
+
+### New Contributors
+
+* @AlexVanderbist made their first contribution in https://github.com/spatie/lighthouse-php/pull/61
+* @mattiasgeniar made their first contribution in https://github.com/spatie/lighthouse-php/pull/62
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.2.2...1.3.0
+
 ## 1.2.2 - 2024-05-06
 
 ### What's Changed
