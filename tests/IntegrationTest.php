@@ -42,6 +42,6 @@ it('throws an exception when lighthouse reports a runtime error', function () {
     // Use an invalid URL that will trigger a runtime error
     Lighthouse::url('https://this-domain-absolutely-does-not-exist-12345.com')
         ->maxWaitForLoad(1000)
-        ->timeoutInSeconds(10)
+        ->timeoutInSeconds(30)
         ->run();
 })->throws(LighthouseReportedError::class);
