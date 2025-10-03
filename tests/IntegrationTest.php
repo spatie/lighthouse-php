@@ -27,7 +27,7 @@ it('can set maxWaitForLoad and complete within expected time', function () {
     $startTime = microtime(true);
 
     $result = Lighthouse::url('https://example.com')
-        ->maxWaitForLoad(5000) // 1 second max wait for load
+        ->maxWaitForLoad(5000) // 5 seconds max wait for load
         ->timeoutInSeconds(60) // Overall timeout higher than maxWaitForLoad
         ->run();
 
