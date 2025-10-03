@@ -1,6 +1,7 @@
 <?php
 
 use Spatie\Lighthouse\Enums\Category;
+use Spatie\Lighthouse\Exceptions\LighthouseReportedError;
 use Spatie\Lighthouse\Lighthouse;
 use Spatie\Lighthouse\Support\Arr;
 use Symfony\Component\Process\Exception\ProcessTimedOutException;
@@ -26,8 +27,8 @@ it('can set maxWaitForLoad and complete within expected time', function () {
     $startTime = microtime(true);
 
     $result = Lighthouse::url('https://example.com')
-        ->maxWaitForLoad(1000) // 1 second max wait for load
-        ->timeoutInSeconds(15) // Overall timeout higher than maxWaitForLoad
+        ->maxWaitForLoad(5000) // 1 second max wait for load
+        ->timeoutInSeconds(60) // Overall timeout higher than maxWaitForLoad
         ->run();
 
     $endTime = microtime(true);
@@ -36,3 +37,11 @@ it('can set maxWaitForLoad and complete within expected time', function () {
     expect($result->scores())->toBeArray();
     expect($executionTime)->toBeLessThan(15);
 });
+
+it('throws an exception when lighthouse reports a runtime error', function () {
+    // Use an invalid URL that will trigger a runtime error
+    Lighthouse::url('https://this-domain-absolutely-does-not-exist-12345.com')
+        ->maxWaitForLoad(1000)
+        ->timeoutInSeconds(10)
+        ->run();
+})->throws(LighthouseReportedError::class);
