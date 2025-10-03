@@ -5,3 +5,4 @@ lighthouseConfig:
     extends: 'lighthouse:default'
     settings: { onlyCategories: [performance, accessibility, best-practices, seo, pwa], formFactor: desktop, output: [json, html], disableNetworkThrottling: true, disableCpuThrottling: true, throttlingMethod: provided, screenEmulation: { disabled: true } }
 timeout: 59300
+maxWaitForLoad: null

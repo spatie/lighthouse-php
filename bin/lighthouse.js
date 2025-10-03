@@ -30,5 +30,10 @@
 
     await chrome.kill();
 
-    process.stdout.write(JSON.stringify(runnerResult));
+    const output = {
+        report: runnerResult.report,
+        runtimeError: runnerResult.lhr?.runtimeError || null
+    };
+
+    process.stdout.write(JSON.stringify(output));
 })();
