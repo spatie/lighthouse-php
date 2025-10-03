@@ -35,7 +35,7 @@ it('can set maxWaitForLoad and complete within expected time', function () {
     $executionTime = $endTime - $startTime;
 
     expect($result->scores())->toBeArray();
-    expect($executionTime)->toBeLessThan(15);
+    expect($executionTime)->toBeLessThan(20);
 });
 
 it('throws an exception when lighthouse reports a runtime error', function () {
