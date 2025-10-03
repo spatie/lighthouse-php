@@ -2,6 +2,14 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 1.3.1 - 2025-10-03
+
+### What's Changed
+
+* Memory improvements by only returning the needed JSON output via NodeJS by @mattiasgeniar in https://github.com/spatie/lighthouse-php/pull/63
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.3.0...1.3.1
+
 ## 1.3.0 - 2025-09-19
 
 ### What's Changed
