@@ -21,7 +21,6 @@ it('can get the scores', function () {
         'accessibility' => 92,
         'best-practices' => 100,
         'seo' => 91,
-        'pwa' => 30,
     ]);
 });
 
@@ -35,7 +34,6 @@ it('will not return categories with a score of null', function () {
         'accessibility' => 92,
         'best-practices' => 100,
         'seo' => 91,
-        'pwa' => 30,
     ]);
 });
 
