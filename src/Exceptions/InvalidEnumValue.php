@@ -2,14 +2,12 @@
 
 namespace Spatie\Lighthouse\Exceptions;
 
-use BackedEnum;
 use Exception;
 
 class InvalidEnumValue extends Exception
 {
     /**
-     * @param  class-string<BackedEnum>  $enumClass
-     * @return static
+     * @phpstan-param class-string<\Spatie\Lighthouse\Enums\Category|\Spatie\Lighthouse\Enums\FormFactor> $enumClass
      */
     public static function make(string $invalidValue, string $enumClass): self
     {

@@ -20,6 +20,7 @@
     },
     "require-dev": {
         "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.0",
         "spatie/pest-plugin-snapshots": "^2.2.1",
         "spatie/ray": "^1.36",
         "spatie/temporary-directory": "^2.1.1"
@@ -37,7 +38,8 @@
     "scripts": {
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
     },
     "config": {
         "sort-packages": true,
