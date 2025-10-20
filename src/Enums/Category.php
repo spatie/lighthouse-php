@@ -12,5 +12,4 @@ enum Category: string
     case Accessibility = 'accessibility';
     case BestPractices = 'best-practices';
     case Seo = 'seo';
-    case ProgressiveWebApp = 'pwa';
 }
