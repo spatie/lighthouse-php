@@ -25,9 +25,9 @@ $result = Lighthouse::url($url)
     ->run();
 ```
 
-In the [HTML report](/docs/lighthouse-php/v1/usage/saving-an-html-report), you can see the results of your budget.
+In the [HTML report](/docs/lighthouse-php/v2/usage/saving-an-html-report), you can see the results of your budget.
 
-![screenshot](https://spatie.be/docs/lighthouse-php/v1/images/budget.jpg).
+![screenshot](https://spatie.be/docs/lighthouse-php/v2/images/budget.jpg).
 
 You can get an array with the results of the budget calling `budgetResults()`.
 

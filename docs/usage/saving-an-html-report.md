@@ -15,7 +15,7 @@ Lighthouse::url('https://example.com')
 
 This is how that report looks like in the browser.
 
-![screenshot](https://spatie.be/docs/lighthouse-php/v1/images/report.jpg)
+![screenshot](https://spatie.be/docs/lighthouse-php/v2/images/report.jpg)
 
 To get the HTML, without save it to a file, simply call `html()`.
 
