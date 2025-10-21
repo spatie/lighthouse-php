@@ -2,6 +2,21 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 2.0.0 - 2025-10-20
+
+### What's Changed
+
+* Bump stefanzweifel/git-auto-commit-action from 6 to 7 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/64
+* Remove PWA category by @Jamesking56 in https://github.com/spatie/lighthouse-php/pull/66
+* v2 - Upgrade to latest version of Lighthouse by @freekmurze in https://github.com/spatie/lighthouse-php/pull/67
+
+### New Contributors
+
+* @Jamesking56 made their first contribution in https://github.com/spatie/lighthouse-php/pull/66
+* @freekmurze made their first contribution in https://github.com/spatie/lighthouse-php/pull/67
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/1.3.1...2.0.0
+
 ## 1.3.1 - 2025-10-03
 
 ### What's Changed

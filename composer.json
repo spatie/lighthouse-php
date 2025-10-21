@@ -15,13 +15,13 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "symfony/process": "^6.1|^7.0"
+        "php": "^8.3",
+        "symfony/process": "^7.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.2",
-        "pestphp/pest": "^1.22.1",
-        "spatie/pest-plugin-snapshots": "^1.1",
+        "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.0",
+        "spatie/pest-plugin-snapshots": "^2.2.1",
         "spatie/ray": "^1.36",
         "spatie/temporary-directory": "^2.1.1"
     },
@@ -38,7 +38,8 @@
     "scripts": {
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "format": "vendor/bin/pint",
+        "analyse": "vendor/bin/phpstan analyse"
     },
     "config": {
         "sort-packages": true,

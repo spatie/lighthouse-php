@@ -23,8 +23,6 @@ class Lighthouse
 
     protected ?int $maxWaitForLoadInMs = null;
 
-    protected ?array $onlyAudits = null;
-
     public static function url(string $url): self
     {
         return new self($url);
