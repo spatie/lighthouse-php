@@ -2,6 +2,16 @@
 
 All notable changes to `lighthouse-php` will be documented in this file.
 
+## 2.0.1 - 2025-11-25
+
+### What's Changed
+
+* Update PHP version requirement to 8.3+ by @thecaliskan in https://github.com/spatie/lighthouse-php/pull/68
+* Added Symfony 8 support to all symfony/* packages. by @thecaliskan in https://github.com/spatie/lighthouse-php/pull/72
+* Bump actions/checkout from 5 to 6 by @dependabot[bot] in https://github.com/spatie/lighthouse-php/pull/73
+
+**Full Changelog**: https://github.com/spatie/lighthouse-php/compare/2.0.0...2.0.1
+
 ## 2.0.0 - 2025-10-20
 
 ### What's Changed
