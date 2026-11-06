@@ -23,7 +23,8 @@
         "phpstan/phpstan": "^2.0",
         "spatie/pest-plugin-snapshots": "^2.2.1",
         "spatie/ray": "^1.36",
-        "spatie/temporary-directory": "^2.1.1"
+        "spatie/temporary-directory": "^2.1.1",
+        "symfony/yaml": "^7.4"
     },
     "autoload": {
         "psr-4": {
